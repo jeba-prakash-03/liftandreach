@@ -1,0 +1,23 @@
+{
+  "name": "liftandreach-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "build:server": "cd server && npm run build",
+    "build:client": "cd client && npm run build",
+    "build": "npm run build:server && npm run build:client",
+    "start:server": "cd server && npm start",
+    "seed": "cd server && npx tsx prisma/seed.ts",
+    "test": "playwright test"
+  },
+  "dependencies": {
+    "@types/sharp": "^0.31.1",
+    "lucide-react": "^1.73.0",
+    "sharp": "^0.35.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1"
+  }
+}

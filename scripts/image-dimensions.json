@@ -1,0 +1,530 @@
+[
+  {
+    "file": "bannerhome.png",
+    "width": 1920,
+    "height": 550,
+    "format": "png"
+  },
+  {
+    "file": "bannerhome.webp",
+    "width": 1920,
+    "height": 550,
+    "format": "webp"
+  },
+  {
+    "file": "bannerhome1.png",
+    "width": 1920,
+    "height": 550,
+    "format": "png"
+  },
+  {
+    "file": "bannerhome1.webp",
+    "width": 1920,
+    "height": 550,
+    "format": "webp"
+  },
+  {
+    "file": "bannerhome2.png",
+    "width": 1920,
+    "height": 550,
+    "format": "png"
+  },
+  {
+    "file": "bannerhome2.webp",
+    "width": 1920,
+    "height": 550,
+    "format": "webp"
+  },
+  {
+    "file": "AIR CRAFT JACKS 1.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "AIR CRAFT JACKS 1.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "AIR CRAFT JACKS 2.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "AIR CRAFT JACKS 2.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "AIR CRAFT JACKS.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "AIR CRAFT JACKS.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "DOCK LEVELLER 1.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "DOCK LEVELLER 1.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "DOCK LEVELLER.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "DOCK LEVELLER.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "GOODS LIFT 1.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "GOODS LIFT 1.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "GOODS LIFT 2.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "GOODS LIFT 2.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "GOODS LIFT 3.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "GOODS LIFT 3.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "GOODS LIFT wall mounted.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "GOODS LIFT wall mounted.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "GOODS LIFT.JPG",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "GOODS LIFT.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "HYDRAULIC FLOOR CRANE - LIGHT DUTY 1.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "HYDRAULIC FLOOR CRANE - LIGHT DUTY 1.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "HYDRAULIC FLOOR CRANE - LIGHT DUTY.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "HYDRAULIC FLOOR CRANE - LIGHT DUTY.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "PALLET TRUCK 1.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "PALLET TRUCK 1.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "PALLET TRUCK.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "PALLET TRUCK.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "Scissor Lift -Truck Mounted.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "Scissor Lift -Truck Mounted.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "Scissor Lift- Die Loader.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "Scissor Lift- Die Loader.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "Scissor Lift- Heavy Duty.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "Scissor Lift- Heavy Duty.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "Scissor Lift- LIGHT WEIGHT 1.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "Scissor Lift- LIGHT WEIGHT 1.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "Scissor Lift- LIGHT WEIGHT.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "Scissor Lift- LIGHT WEIGHT.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "Scissor Lift- Pit Mounted.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "Scissor Lift- Pit Mounted.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "Scissor Lift- Rollers On Top 1.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "Scissor Lift- Rollers On Top 1.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "Scissor Lift- Rollers On Top 2.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "Scissor Lift- Rollers On Top 2.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "Scissor Lift- Rollers On Top.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "Scissor Lift- Rollers On Top.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "Scissor Lift- Self Propelled 1.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "Scissor Lift- Self Propelled 1.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "Scissor Lift- Self Propelled.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "Scissor Lift- Self Propelled.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "Scissor Lift- Towable 1.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "Scissor Lift- Towable 1.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "Scissor Lift- Towable 2.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "Scissor Lift- Towable 2.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "Scissor Lift- Towable.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "Scissor Lift- Towable.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "Scissor Lift- Traction.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "Scissor Lift- Traction.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "ZERO LIFT 1.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "ZERO LIFT 1.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "ZERO LIFT.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "ZERO LIFT.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "aerial truck mounted.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "aerial truck mounted.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "aerial.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "aerial.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "electric scissor lift.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "electric scissor lift.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "hollow.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "hollow.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "hydraulic barrel lifter tilter 1.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "hydraulic barrel lifter tilter 1.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "hydraulic barrel lifter tilter.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "hydraulic barrel lifter tilter.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "scissor lift TRACTION.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "scissor lift TRACTION.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "scissor lift.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "scissor lift.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "stacker 1.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "stacker 1.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  },
+  {
+    "file": "stacker.jpg",
+    "width": 250,
+    "height": 250,
+    "format": "jpeg"
+  },
+  {
+    "file": "stacker.webp",
+    "width": 250,
+    "height": 250,
+    "format": "webp"
+  }
+]

@@ -1,0 +1,118 @@
+/* BOLD INDUSTRIAL DESIGN TOKENS (src/v3/styles/tokens.css) */
+
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/archivo-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('/fonts/archivo-800.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/public-sans-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/public-sans-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/public-sans-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/jetbrains-mono-400.woff2') format('woff2');
+}
+
+:root {
+  /* Colors */
+  --brand: #0A4DA3;       /* Strong blue, dominant */
+  --brand-dark: #062B5E;  /* Deep blue */
+  --navy: #071A33;        /* Dark navy utility / headers */
+  --red: #E3262E;         /* Vibrant primary button / CTA red */
+  --ice: #F2F5F9;         /* Light sections */
+  --white: #FFFFFF;
+  --ink: #0B1B33;         /* Body / text ink */
+  --muted: #5A6B82;       /* Subtext / captions */
+  --line: #D9E1EC;        /* 1px structural borders */
+
+  /* Typography */
+  --font-display: 'Archivo', sans-serif;
+  --font-body: 'Public Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Scale (Fixed px) */
+  --fs-hero: 60px;
+  --lh-hero: 1.02;
+
+  --fs-h1: 44px;
+  --lh-h1: 1.05;
+
+  --fs-h2: 32px;
+  --lh-h2: 1.1;
+
+  --fs-h3: 20px;
+  --lh-h3: 1.2;
+
+  --fs-body: 16px;
+  --lh-body: 1.6;
+
+  --fs-small: 14px;
+  --fs-micro: 12px;
+
+  /* Spacing */
+  --section-y: 64px;
+  --pad-x: 48px;
+
+  /* Shape Signature */
+  --hero-cut: polygon(0 0, 100% 0, 100% calc(100% - 64px), 0 100%);
+  --tile-cut: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+  --overlay-shadow: 0 12px 32px rgba(7, 26, 51, 0.18);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --fs-hero: 40px;
+    --fs-h1: 32px;
+    --fs-h2: 24px;
+    --section-y: 40px;
+    --pad-x: 20px;
+    --hero-cut: polygon(0 0, 100% 0, 100% calc(100% - 36px), 0 100%);
+  }
+}
+
+/* Floor shadow under product cutouts */
+.cutout-floor-shadow {
+  position: absolute;
+  bottom: 6px;
+  left: 15%;
+  right: 15%;
+  height: 12px;
+  background: radial-gradient(ellipse at center, rgba(7, 26, 51, 0.35) 0%, rgba(7, 26, 51, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}

@@ -1,0 +1,242 @@
+@import "tailwindcss";
+@import "./v3/styles/tokens.css";
+
+/* -------------------------------------------------------------
+   COMPACT & CLEAN ARCHITECTURAL DESIGN SYSTEM (FIXED TOKENS)
+   Fonts:
+   - Headings: "Archivo" 600
+   - Body & UI: "Public Sans" 400/500/600
+   - Model Codes ONLY: "JetBrains Mono" 400
+------------------------------------------------------------- */
+
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/archivo-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/public-sans-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/public-sans-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/public-sans-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/jetbrains-mono-400.woff2') format('woff2');
+}
+
+:root {
+  --paper: #F6F4F0;
+  --stone: #E8E4DD;
+  --stone-deep: #D5CFC5;
+  --charcoal: #15191E;
+  --graphite: #3A424C;
+  --steel: #7C8794;
+  --brand-blue: #1F4E96;
+  --brand-red: #C8202F;
+
+  /* Bold Industrial Tokens */
+  --pad-x: 48px;
+  --section-y: 64px;
+
+  --fs-hero: 60px;
+  --lh-hero: 1.02;
+
+  --fs-h1: 44px;
+  --lh-h1: 1.05;
+
+  --fs-h2: 32px;
+  --lh-h2: 1.1;
+
+  --fs-h3: 20px;
+  --lh-h3: 1.2;
+
+  --fs-lead: 20px;
+  --lh-lead: 1.55;
+
+  --fs-body: 16px;
+  --lh-body: 1.6;
+
+  --fs-small: 14px;
+  --lh-small: 1.5;
+
+  --fs-micro: 12px;
+  --lh-micro: 1.4;
+
+  --font-heading: 'Archivo', sans-serif;
+  --font-body: 'Public Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* PART 1 - Motion Tokens */
+  --dur-fast: 150ms;
+  --dur-base: 250ms;
+  --dur-slow: 450ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* Depth Tokens (Floating layers ONLY) */
+  --shadow-e1: 0 1px 2px rgba(15, 27, 45, 0.06);
+  --shadow-e2: 0 8px 24px rgba(15, 27, 45, 0.10);
+  --shadow-e3: 0 24px 64px rgba(15, 27, 45, 0.16);
+}
+
+@media (max-width: 1279px) {
+  :root {
+    --pad-x: 32px;
+  }
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --section-y: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --pad-x: 20px;
+    --fs-hero: 36px;
+    --fs-h1: 30px;
+    --fs-h2: 24px;
+  }
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--charcoal);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  letter-spacing: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings: Archivo 600, letter-spacing -0.01em for >= 32px, 0 under 32px */
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+h1, .text-hero, .text-h1 {
+  letter-spacing: -0.01em;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Hard limit: NO section may exceed 64px top/bottom padding */
+section {
+  padding-top: var(--section-y);
+  padding-bottom: var(--section-y);
+}
+
+.content-container {
+  padding-left: var(--pad-x);
+  padding-right: var(--pad-x);
+}
+
+/* Depth token classes for floating layers */
+.elevation-1 {
+  box-shadow: var(--shadow-e1);
+}
+.elevation-2 {
+  box-shadow: var(--shadow-e2);
+}
+.elevation-3 {
+  box-shadow: var(--shadow-e3);
+}
+
+/* 1px Hairlines */
+.border-stone-deep {
+  border-color: var(--stone-deep);
+}
+
+/* Custom selection */
+::selection {
+  background: var(--brand-blue);
+  color: var(--paper);
+}
+
+/* Focus rings: 2px --brand-blue offset 2px */
+:focus-visible {
+  outline: 2px solid var(--brand-blue);
+  outline-offset: 2px;
+}
+
+/* Soft floor shadow under cutouts */
+.floor-shadow {
+  position: absolute;
+  bottom: 8%;
+  left: 20%;
+  right: 20%;
+  height: 10px;
+  background: radial-gradient(ellipse at center, rgba(21, 25, 30, 0.22) 0%, rgba(21, 25, 30, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Clean text hover underline */
+.hover-underline-expand {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.hover-underline-expand:hover {
+  text-decoration-line: underline;
+}
+
+/* Shimmer animation for skeletons */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, #E8E4DD 0%, #F6F4F0 50%, #E8E4DD 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+/* Respect prefers-reduced-motion everywhere */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
