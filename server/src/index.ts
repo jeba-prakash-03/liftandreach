@@ -10,7 +10,8 @@ import adminRoutes from './routes/adminRoutes';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = Number(process.env.PORT) || 5000;
+const HOST = '0.0.0.0';
 const CLIENT_URL = process.env.CLIENT_URL || 'http://localhost:5173';
 
 // Security Headers with Helmet
@@ -24,7 +25,13 @@ app.use(
 // CORS configuration
 app.use(
   cors({
-    origin: [CLIENT_URL, 'http://localhost:5173', 'http://127.0.0.1:5173'],
+    origin: (origin, callback) => {
+      if (!origin) return callback(null, true);
+      if (CLIENT_URL === '*' || origin === CLIENT_URL || origin.includes('localhost') || origin.includes('127.0.0.1')) {
+        return callback(null, true);
+      }
+      return callback(null, true);
+    },
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
@@ -40,14 +47,18 @@ app.use(cookieParser());
 app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 app.use('/images', express.static(path.join(__dirname, '../../client/public/images')));
 
+// Root & Health Checks for container deployment
+app.get('/', (req, res) => {
+  res.status(200).json({ status: 'ok', service: 'Lift and Reach API', timestamp: new Date().toISOString() });
+});
+
+app.get(['/health', '/healthz', '/api/health'], (req, res) => {
+  res.status(200).json({ status: 'healthy', timestamp: new Date().toISOString() });
+});
+
 // API Routes
 app.use('/api', publicRoutes);
 app.use('/api/admin', adminRoutes);
-
-// Health Check
-app.get('/health', (req, res) => {
-  res.json({ status: 'healthy', timestamp: new Date().toISOString() });
-});
 
 // Global Error Handler
 app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
@@ -55,8 +66,8 @@ app.use((err: any, req: express.Request, res: express.Response, next: express.Ne
   res.status(500).json({ error: 'Internal server error occurred.' });
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 Lift and Reach API server listening at http://localhost:${PORT}`);
+app.listen(PORT, HOST, () => {
+  console.log(`🚀 Lift and Reach API server listening on http://${HOST}:${PORT}`);
   console.log(`🌐 CORS enabled for: ${CLIENT_URL}`);
 });
 
