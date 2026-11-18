@@ -1,8 +1,10 @@
-node_modules
-# Keep environment variables out of version control
-.env
+# Dependencies
+node_modules/
 
-/generated/prisma
+# Environment variables
+.env
+.env.*
+!*.example
 
 # Build output
 dist/
@@ -12,9 +14,11 @@ dist/
 
 # Logs
 *.log
+npm-debug.log*
 
 # OS
 .DS_Store
+Thumbs.db
 
 # IDE
 .vscode/

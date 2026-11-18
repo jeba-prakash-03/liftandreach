@@ -1,38 +1,77 @@
 # Dependencies
 node_modules/
+*/node_modules/
+**/node_modules/
 
-# Build output
+# Environment variables (keep templates like .env.example)
+.env
+.env.*
+*.env
+**/.env
+**/.env.*
+!**/.env.example
+
+# Build outputs
 dist/
 build/
+**/dist/
+**/build/
+client/dist/
+server/dist/
 
-# Environment variables
-.env
-.env.local
-.env.*.local
+# Test artifacts, reports, and screenshots
+screenshots/
+**/screenshots/
+test-results/
+**/test-results/
+playwright-report/
+**/playwright-report/
+QA_REPORT.md
+CHECKLIST.md
 
-# IDE
+# Python cache
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+
+# Temporary & debug images
+glitch_*.png
+*.tmp
+*.temp
+
+# IDE & Editor files
 .vscode/
 .idea/
 *.swp
 *.swo
+.agents/
+.claude/
+.windsurf/
+**/.agents/
+**/.claude/
+**/.windsurf/
+skills-lock.json
+**/skills-lock.json
 
-# OS
+# OS files
 .DS_Store
 Thumbs.db
 
 # Logs
 *.log
 npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # Vite cache
 .vite/
+**/.vite/
 
 # Uploads
 uploads/
+**/uploads/
 
 # Prisma generated
 /generated/prisma
-
-# Misc
-*.tmp
-*.temp
+**/generated/prisma
