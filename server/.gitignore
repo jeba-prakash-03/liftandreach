@@ -3,3 +3,20 @@ node_modules
 .env
 
 /generated/prisma
+
+# Build output
+dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Uploads
+uploads/

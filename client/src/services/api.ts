@@ -41,6 +41,21 @@ export const getCaptcha = async (): Promise<{ token: string; question: string }>
   return data;
 };
 
+export const getSiteContent = async (): Promise<Record<string, any>> => {
+  const { data } = await api.get('/site-content');
+  return data;
+};
+
+export const adminGetSiteContent = async (): Promise<Record<string, any>> => {
+  const { data } = await api.get('/admin/site-content');
+  return data;
+};
+
+export const adminUpdateSiteContent = async (section: string, payload: any): Promise<any> => {
+  const { data } = await api.put(`/admin/site-content/${section}`, payload);
+  return data;
+};
+
 export const submitEnquiry = async (payload: {
   name: string;
   email: string;

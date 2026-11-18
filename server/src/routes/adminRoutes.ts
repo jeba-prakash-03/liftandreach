@@ -20,7 +20,9 @@ import {
   adminUpdateHeroSlide,
   adminDeleteHeroSlide,
   adminUpdateSettings,
-  adminUpdatePage
+  adminUpdatePage,
+  adminGetSiteContent,
+  adminUpdateSiteContent
 } from '../controllers/adminController';
 import { upload, handleImageUpload } from '../controllers/uploadController';
 import { authenticateAdmin } from '../middleware/auth';
@@ -59,6 +61,10 @@ router.delete('/hero-slides/:id', authenticateAdmin, adminDeleteHeroSlide);
 // Settings and Pages
 router.put('/settings', authenticateAdmin, adminUpdateSettings);
 router.put('/pages/:slug', authenticateAdmin, adminUpdatePage);
+
+// Site Content (Dynamic sections)
+router.get('/site-content', authenticateAdmin, adminGetSiteContent);
+router.put('/site-content/:section', authenticateAdmin, adminUpdateSiteContent);
 
 // Image Upload
 router.post('/upload', authenticateAdmin, upload.single('image'), handleImageUpload);

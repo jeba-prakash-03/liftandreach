@@ -41,6 +41,10 @@ interface AppStoreState {
   // Navigation / Loading state
   isNavigating: boolean;
   setNavigating: (val: boolean) => void;
+
+  // Mobile menu drawer state
+  isMobileMenuOpen: boolean;
+  setMobileMenuOpen: (open: boolean) => void;
 }
 
 const loadPersisted = <T>(key: string, fallback: T): T => {
@@ -125,5 +129,8 @@ export const useAppStore = create<AppStoreState>((set, get) => ({
   closeQuoteModal: () => set({ quoteModalData: null }),
 
   isNavigating: false,
-  setNavigating: (val) => set({ isNavigating: val })
+  setNavigating: (val) => set({ isNavigating: val }),
+
+  isMobileMenuOpen: false,
+  setMobileMenuOpen: (open) => set({ isMobileMenuOpen: open })
 }));

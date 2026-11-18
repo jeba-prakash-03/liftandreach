@@ -7,7 +7,8 @@ import {
   getSettings,
   getHeroSlides,
   getPageBySlug,
-  submitEnquiry
+  submitEnquiry,
+  getSiteContent
 } from '../controllers/publicController';
 import { generateCaptcha } from '../utils/captcha';
 import rateLimit from 'express-rate-limit';
@@ -29,6 +30,7 @@ router.get('/products/:slug', getProductBySlug);
 router.get('/settings', getSettings);
 router.get('/hero-slides', getHeroSlides);
 router.get('/pages/:slug', getPageBySlug);
+router.get('/site-content', getSiteContent);
 router.get('/captcha', generateCaptcha);
 router.post('/enquiries', enquiryLimiter, submitEnquiry);
 

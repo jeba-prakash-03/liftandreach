@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.adminUpdatePage = exports.adminUpdateSettings = exports.adminDeleteHeroSlide = exports.adminUpdateHeroSlide = exports.adminCreateHeroSlide = exports.adminGetHeroSlides = exports.adminDeleteCategory = exports.adminUpdateCategory = exports.adminCreateCategory = exports.adminGetCategories = exports.adminDeleteProduct = exports.adminUpdateProduct = exports.adminCreateProduct = exports.adminGetProducts = exports.exportEnquiriesCsv = exports.deleteEnquiry = exports.updateEnquiryStatus = exports.getEnquiries = exports.getAdminProfile = exports.adminLogout = exports.adminLogin = void 0;
+exports.adminUpdateSiteContent = exports.adminGetSiteContent = exports.adminUpdatePage = exports.adminUpdateSettings = exports.adminDeleteHeroSlide = exports.adminUpdateHeroSlide = exports.adminCreateHeroSlide = exports.adminGetHeroSlides = exports.adminDeleteCategory = exports.adminUpdateCategory = exports.adminCreateCategory = exports.adminGetCategories = exports.adminDeleteProduct = exports.adminUpdateProduct = exports.adminCreateProduct = exports.adminGetProducts = exports.exportEnquiriesCsv = exports.deleteEnquiry = exports.updateEnquiryStatus = exports.getEnquiries = exports.getAdminProfile = exports.adminLogout = exports.adminLogin = void 0;
 const prisma_1 = __importDefault(require("../utils/prisma"));
 const bcryptjs_1 = __importDefault(require("bcryptjs"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
@@ -428,3 +428,33 @@ const adminUpdatePage = async (req, res) => {
     }
 };
 exports.adminUpdatePage = adminUpdatePage;
+// GET /api/admin/site-content
+const adminGetSiteContent = async (req, res) => {
+    try {
+        const rows = (await prisma_1.default.$queryRawUnsafe('SELECT section, data FROM site_content'));
+        const result = {};
+        for (const r of rows) {
+            result[r.section] = typeof r.data === 'string' ? JSON.parse(r.data) : r.data;
+        }
+        res.json(result);
+    }
+    catch (error) {
+        res.status(500).json({ error: 'Failed to load site content' });
+    }
+};
+exports.adminGetSiteContent = adminGetSiteContent;
+// PUT /api/admin/site-content/:section
+const adminUpdateSiteContent = async (req, res) => {
+    try {
+        const section = req.params.section;
+        const data = req.body;
+        const jsonStr = JSON.stringify(data);
+        await prisma_1.default.$executeRawUnsafe('INSERT INTO site_content (section, data) VALUES (?, ?) ON DUPLICATE KEY UPDATE data = ?', section, jsonStr, jsonStr);
+        res.json({ success: true, section, data });
+    }
+    catch (error) {
+        console.error('Failed to update site content:', error);
+        res.status(500).json({ error: 'Failed to update section content' });
+    }
+};
+exports.adminUpdateSiteContent = adminUpdateSiteContent;

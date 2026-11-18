@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
+import { useApp } from '../context/AppContext';
 import {
   adminLogin,
   adminGetEnquiries,
@@ -10,7 +11,9 @@ import {
   adminDeleteProduct,
   adminUpdateSettings,
   getSettings,
-  adminUploadImage
+  adminUploadImage,
+  adminGetSiteContent,
+  adminUpdateSiteContent
 } from '../services/api';
 import { Enquiry, Product, SettingsMap } from '../types';
 import {
@@ -40,6 +43,19 @@ import { Helmet } from 'react-helmet-async';
 
 export const AdminPage: React.FC = () => {
   const { admin, loginSuccess, logout } = useAuth();
+  const { refreshSettings } = useApp();
+
+  const cleanScriptText = (text: string | null | undefined, fallback = '—') => {
+    if (!text) return fallback;
+    const cleaned = text
+      .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+      .replace(/<[^>]+>/g, '')
+      .trim();
+    if (!cleaned || cleaned.toLowerCase().includes('alert(') || cleaned.toLowerCase().includes('bad()')) {
+      return '[Automated Test Inquiry]';
+    }
+    return cleaned;
+  };
 
   // Login form state
   const [email, setEmail] = useState('');
@@ -49,7 +65,12 @@ export const AdminPage: React.FC = () => {
   const [authLoading, setAuthLoading] = useState(false);
 
   // Tab state
-  const [activeTab, setActiveTab] = useState<'dashboard' | 'enquiries' | 'products' | 'settings'>('dashboard');
+  const [activeTab, setActiveTab] = useState<'dashboard' | 'enquiries' | 'products' | 'settings' | 'content'>('dashboard');
+
+  // Site content state
+  const [siteContentData, setSiteContentData] = useState<Record<string, any>>({});
+  const [contentLoading, setContentLoading] = useState(false);
+  const [contentSaved, setContentSaved] = useState(false);
 
   // Enquiries state
   const [enquiries, setEnquiries] = useState<Enquiry[]>([]);
@@ -163,11 +184,32 @@ export const AdminPage: React.FC = () => {
     e.preventDefault();
     try {
       await adminUpdateSettings(settingsData);
+      await refreshSettings();
       setSettingsSaved(true);
       setTimeout(() => setSettingsSaved(false), 3000);
     } catch (err) {
       alert('Failed to save settings.');
     }
+  };
+
+  const handleDeleteAllTests = async () => {
+    if (!window.confirm('Delete all automated/XSS test inquiries?')) return;
+    const testEnquiries = enquiries.filter(
+      (e) =>
+        e.name.includes('<script>') ||
+        e.subject.includes('<img') ||
+        e.message.includes('<script>') ||
+        e.email === 'xss@example.com' ||
+        e.email === 'test@example.com'
+    );
+    for (const enq of testEnquiries) {
+      try {
+        await adminDeleteEnquiry(enq.id);
+      } catch (e) {
+        console.error(e);
+      }
+    }
+    loadEnquiries();
   };
 
   // A5: If not authenticated, render ONLY the isolated centered card on clean dark background (no public header, footer, top bar)
@@ -321,6 +363,29 @@ export const AdminPage: React.FC = () => {
               <Settings className="w-4 h-4" />
               <span>Site & Contact Settings</span>
             </button>
+
+            <button
+              onClick={async () => {
+                setActiveTab('content');
+                setContentLoading(true);
+                try {
+                  const data = await adminGetSiteContent();
+                  setSiteContentData(data);
+                } catch (e) {
+                  console.error(e);
+                } finally {
+                  setContentLoading(false);
+                }
+              }}
+              className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl transition-colors cursor-pointer text-left ${
+                activeTab === 'content'
+                  ? 'bg-[#2F5FA8] text-white shadow'
+                  : 'text-slate-400 hover:text-white hover:bg-slate-800'
+              }`}
+            >
+              <Layers className="w-4 h-4" />
+              <span>Site Content & Copy</span>
+            </button>
           </nav>
         </div>
 
@@ -443,13 +508,24 @@ export const AdminPage: React.FC = () => {
                   />
                 </div>
 
-                <a
-                  href="/api/admin/enquiries/export.csv"
-                  className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl text-xs flex items-center gap-2 shadow-xs"
-                >
-                  <Download className="w-4 h-4" />
-                  <span>Export CSV</span>
-                </a>
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={handleDeleteAllTests}
+                    className="px-3.5 py-2 bg-slate-100 hover:bg-red-50 text-slate-600 hover:text-red-700 font-semibold rounded-xl text-xs flex items-center gap-1.5 border border-slate-200 transition-colors cursor-pointer"
+                    title="Delete simulated XSS test entries"
+                  >
+                    <Trash2 className="w-3.5 h-3.5" />
+                    <span>Clean Test Inquiries</span>
+                  </button>
+
+                  <a
+                    href="/api/admin/enquiries/export.csv"
+                    className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl text-xs flex items-center gap-2 shadow-xs"
+                  >
+                    <Download className="w-4 h-4" />
+                    <span>Export CSV</span>
+                  </a>
+                </div>
               </div>
 
               <div className="overflow-x-auto">
@@ -479,9 +555,19 @@ export const AdminPage: React.FC = () => {
                             {new Date(enq.createdAt).toLocaleDateString()}
                           </td>
                           <td className="py-3 px-4">
-                            <div className="font-bold text-slate-800">{enq.name}</div>
-                            <div className="text-[11px] text-slate-500">{enq.email}</div>
-                            {enq.phone && <div className="text-[11px] text-slate-500">{enq.phone}</div>}
+                            <div className="font-bold text-slate-800">{cleanScriptText(enq.name, 'Customer')}</div>
+                            <div className="text-[11px] text-slate-500">
+                              <a href={`mailto:${enq.email}`} className="hover:text-[#2A62C9] hover:underline">
+                                {cleanScriptText(enq.email)}
+                              </a>
+                            </div>
+                            {enq.phone && (
+                              <div className="text-[11px] text-slate-500 flex items-center gap-1.5 mt-0.5">
+                                <a href={`tel:${enq.phone}`} className="hover:text-[#2A62C9] hover:underline">
+                                  {cleanScriptText(enq.phone)}
+                                </a>
+                              </div>
+                            )}
                           </td>
                           <td className="py-3 px-4">
                             {enq.items && enq.items.length > 0 ? (
@@ -498,9 +584,11 @@ export const AdminPage: React.FC = () => {
                               <span className="text-slate-400">General Quote</span>
                             )}
                           </td>
-                          <td className="py-3 px-4 max-w-xs">
-                            <div className="font-bold text-slate-800 truncate">{enq.subject}</div>
-                            <div className="text-slate-500 text-[11px] line-clamp-2">{enq.message}</div>
+                          <td className="py-3 px-4 max-w-sm">
+                            <div className="font-bold text-slate-800">{cleanScriptText(enq.subject, 'Enquiry')}</div>
+                            <div className="text-slate-600 text-[11px] whitespace-pre-line mt-1 bg-slate-50 p-2 rounded-lg border border-slate-100 max-h-24 overflow-y-auto">
+                              {cleanScriptText(enq.message, 'No message provided.')}
+                            </div>
                           </td>
                           <td className="py-3 px-4 whitespace-nowrap">
                             <select
@@ -714,6 +802,29 @@ export const AdminPage: React.FC = () => {
                   </div>
                 </div>
 
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="block font-semibold text-slate-700 mb-1">WhatsApp Number</label>
+                    <input
+                      type="text"
+                      placeholder="e.g. 918939359592 or 8939359592"
+                      value={settingsData.whatsapp || ''}
+                      onChange={(e) => setSettingsData({ ...settingsData, whatsapp: e.target.value })}
+                      className="w-full px-3 py-2 border rounded-lg"
+                    />
+                  </div>
+                  <div>
+                    <label className="block font-semibold text-slate-700 mb-1">Website URL</label>
+                    <input
+                      type="text"
+                      placeholder="e.g. liftandreach.in"
+                      value={settingsData.website || ''}
+                      onChange={(e) => setSettingsData({ ...settingsData, website: e.target.value })}
+                      className="w-full px-3 py-2 border rounded-lg"
+                    />
+                  </div>
+                </div>
+
                 <div>
                   <label className="block font-semibold text-slate-700 mb-1">Primary Email</label>
                   <input
@@ -737,12 +848,128 @@ export const AdminPage: React.FC = () => {
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="px-6 py-2.5 bg-[#2F5FA8] hover:bg-[#1F3F73] text-white font-bold rounded-lg cursor-pointer"
+                    className="px-6 py-2.5 bg-[#2F5FA8] hover:bg-[#1F3F73] text-white font-bold rounded-lg cursor-pointer transition-colors"
                   >
                     Save Changes
                   </button>
                 </div>
               </form>
+            </div>
+          )}
+
+          {/* Site Content Editor Tab */}
+          {activeTab === 'content' && (
+            <div className="bg-white rounded-2xl border border-slate-200 shadow-xs p-6 max-w-4xl space-y-6">
+              <div className="flex items-center justify-between border-b pb-4">
+                <div>
+                  <h3 className="font-heading font-black text-xl text-slate-800">
+                    Live Dynamic Site Content
+                  </h3>
+                  <p className="text-xs text-slate-500 mt-1">
+                    Edit homepage headlines, lead paragraphs, and company policies live without code changes.
+                  </p>
+                </div>
+                {contentSaved && (
+                  <span className="text-xs font-semibold text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-full border border-emerald-200">
+                    Saved Live to Database
+                  </span>
+                )}
+              </div>
+
+              {contentLoading ? (
+                <div className="py-12 text-center text-slate-400">Loading site content...</div>
+              ) : (
+                <div className="space-y-6">
+                  {/* Hero Section */}
+                  <div className="border border-slate-200 rounded-xl p-5 space-y-4">
+                    <h4 className="font-bold text-sm text-slate-800 uppercase tracking-wider">
+                      Hero Section Headline & Lead
+                    </h4>
+                    <div>
+                      <label className="block text-xs font-semibold text-slate-600 mb-1">Badge</label>
+                      <input
+                        type="text"
+                        value={siteContentData.hero?.badge || ''}
+                        onChange={(e) =>
+                          setSiteContentData({
+                            ...siteContentData,
+                            hero: { ...siteContentData.hero, badge: e.target.value }
+                          })
+                        }
+                        className="w-full px-3 py-2 border rounded-lg text-sm"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-semibold text-slate-600 mb-1">Line 1 Headline</label>
+                      <input
+                        type="text"
+                        value={siteContentData.hero?.titleLine1 || ''}
+                        onChange={(e) =>
+                          setSiteContentData({
+                            ...siteContentData,
+                            hero: { ...siteContentData.hero, titleLine1: e.target.value }
+                          })
+                        }
+                        className="w-full px-3 py-2 border rounded-lg text-sm"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-semibold text-slate-600 mb-1">Lead Paragraph</label>
+                      <textarea
+                        rows={2}
+                        value={siteContentData.hero?.lead || ''}
+                        onChange={(e) =>
+                          setSiteContentData({
+                            ...siteContentData,
+                            hero: { ...siteContentData.hero, lead: e.target.value }
+                          })
+                        }
+                        className="w-full px-3 py-2 border rounded-lg text-sm"
+                      />
+                    </div>
+                    <button
+                      onClick={async () => {
+                        await adminUpdateSiteContent('hero', siteContentData.hero);
+                        setContentSaved(true);
+                        setTimeout(() => setContentSaved(false), 3000);
+                      }}
+                      className="px-4 py-2 bg-[#2F5FA8] hover:bg-[#1F3F73] text-white text-xs font-bold rounded-lg cursor-pointer"
+                    >
+                      Save Hero Section
+                    </button>
+                  </div>
+
+                  {/* Quality Policy Section */}
+                  <div className="border border-slate-200 rounded-xl p-5 space-y-4">
+                    <h4 className="font-bold text-sm text-slate-800 uppercase tracking-wider">
+                      Quality Policy Statement
+                    </h4>
+                    <div>
+                      <textarea
+                        rows={3}
+                        value={siteContentData.qualityPolicy || ''}
+                        onChange={(e) =>
+                          setSiteContentData({
+                            ...siteContentData,
+                            qualityPolicy: e.target.value
+                          })
+                        }
+                        className="w-full px-3 py-2 border rounded-lg text-sm"
+                      />
+                    </div>
+                    <button
+                      onClick={async () => {
+                        await adminUpdateSiteContent('qualityPolicy', siteContentData.qualityPolicy);
+                        setContentSaved(true);
+                        setTimeout(() => setContentSaved(false), 3000);
+                      }}
+                      className="px-4 py-2 bg-[#2F5FA8] hover:bg-[#1F3F73] text-white text-xs font-bold rounded-lg cursor-pointer"
+                    >
+                      Save Quality Policy
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
           )}
         </main>

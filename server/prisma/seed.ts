@@ -458,12 +458,12 @@ async function main() {
             { label: 'CLOSED HT.', values: ['2500 MM', '2500 MM'] },
             { label: 'RAISED HT.FROM GL', values: ['10000 MM', '8000 MM'] },
             { label: 'PLATFORM SIZE', values: ['2250 X 1100 MM', '2250 X 1100 MM'] },
-            // FLAG: Second model battery lists 25 V/ 225 Ah (likely 24 V typo on old site). Kept as-is.
-            { label: 'BATTERY', values: ['24 V/ 225 Ah', '25 V/ 225 Ah (Note: listed as 25V on original site)'] }
+            // FLAG: Second model battery lists 25 V/ 225 Ah (likely 24 V typo on old site). Kept verbatim.
+            { label: 'BATTERY', values: ['24 V/ 225 Ah', '25 V/ 225 Ah'] }
           ]
         }
       ],
-      notes: ['FLAG NOTE: Second model battery listed on original site as 25 V/ 225 Ah (likely a 24 V typo). Stored verbatim.'],
+      notes: [],
       sortOrder: 2,
       isActive: true
     }
@@ -735,8 +735,7 @@ async function main() {
       specTables: [
         {
           title: 'Specifications',
-          // FLAG: First column capacity in old site is "500" with no unit. Kept verbatim.
-          columns: ['CAPACITY', '500 (Note: Unit not specified in old site, assumed Kg)', '1000 Kg', '2000 Kg'],
+          columns: ['CAPACITY', '500', '1000 Kg', '2000 Kg'],
           rows: [
             { label: 'HEIGHT', values: ['12 METERS', '12 METERS', '12 METERS'] },
             { label: 'BASKET SIZE', values: ['1200 X 1200 X1200 HT MM', '1500 X 1500 X1200 HT MM', '1500 X 1500 X1200 HT MM'] }
@@ -933,10 +932,9 @@ async function main() {
       specTables: [
         {
           title: 'Specifications',
-          // FLAG: 2nd col repeats code LRHS-1T-1.5M with 3000 mm lift; 3rd col has LRHS-2T-1.6M but capacity 1000 Kgs. Kept verbatim.
-          columns: ['TYPE CODE', 'LRHS-1T-1.5M', 'LRHS-1T-1.5M (Note: 3000 MM Lift)', 'LRHS-2T-1.6M'],
+          columns: ['TYPE CODE', 'LRHS-1T-1.5M', 'LRHS-1T-1.5M', 'LRHS-2T-1.6M'],
           rows: [
-            { label: 'CAPACITY', values: ['1000 Kgs', '1000 Kgs', '1000 Kgs (Note: Listed as 1000 Kgs despite 2T code)'] },
+            { label: 'CAPACITY', values: ['1000 Kgs', '1000 Kgs', '1000 Kgs'] },
             { label: 'LIFTING HEIGHT', values: ['1500 MM', '3000 MM', '1600 MM'] },
             { label: 'CLOSED HEIGHT', values: ['80 MM', '80 MM', '80 MM'] },
             { label: 'FORK HEIGHT', values: ['900 MM', '900 MM', '1000 MM'] },
@@ -1025,8 +1023,7 @@ async function main() {
           title: 'Specifications',
           columns: ['TYPE', 'LRPT-2T', 'LRPT-3.5T'],
           rows: [
-            // FLAG: LRPT-3.5T lists capacity 2500 Kgs. Kept verbatim.
-            { label: 'CAPACITY', values: ['2000 Kgs', '2500 Kgs (Note: Listed as 2500 Kgs on original site despite 3.5T code)'] },
+            { label: 'CAPACITY', values: ['2000 Kgs', '2500 Kgs'] },
             { label: 'WIDTH OF FORKS', values: ['160 MM', '160 MM'] },
             { label: 'WIDTH BETWEEN FORKS', values: ['225 MM', '230 MM'] },
             { label: 'OVERALL FORK WIDTH', values: ['540 MM', '550 MM'] },

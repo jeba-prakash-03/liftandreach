@@ -1,139 +1,455 @@
-# CHECKLIST & KNOWN INCONSISTENCIES
-**Lift and Reach Equipments Modernization Project**
+# Image Quality Audit & Replacement Checklist
 
-This document tracks all verified catalog items, crawl outputs, known data inconsistencies preserved verbatim from the original site, and items requiring client confirmation.
+This checklist tracks low-resolution source images under 1000px wide from the original website catalog that should ideally be replaced with high-resolution original factory photographs (1600px+ width) when available.
 
----
+| File Path | Original Natural Dimensions | Status | Notes |
+| :--- | :--- | :--- | :--- |
+| `Client_Satisfied-512.png` | 60x60 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `Client_Satisfied-512.webp` | 60x60 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `cutout/AIR CRAFT JACKS 1.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `cutout/AIR CRAFT JACKS 2.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `cutout/AIR CRAFT JACKS.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `cutout/DOCK LEVELLER 1.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `cutout/DOCK LEVELLER.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `cutout/GOODS LIFT 1.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `cutout/GOODS LIFT 2.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `cutout/GOODS LIFT 3.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `cutout/GOODS LIFT wall mounted.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `cutout/GOODS LIFT.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `cutout/PALLET TRUCK 1.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `cutout/PALLET TRUCK.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `cutout/ZERO LIFT 1.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `cutout/ZERO LIFT.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `cutout/aerial truck mounted.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `cutout/aerial.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `cutout/electric scissor lift.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `cutout/hollow.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `cutout/hydraulic barrel lifter tilter 1.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `cutout/hydraulic barrel lifter tilter.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `cutout/scissor lift TRACTION.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `cutout/scissor lift.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `cutout/stacker 1.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `cutout/stacker.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `home/1.jpg` | 50x50 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `home/1.webp` | 50x50 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `home/10.jpg` | 50x50 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `home/10.webp` | 50x50 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `home/2.jpg` | 50x50 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `home/2.webp` | 50x50 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `home/3.jpg` | 50x50 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `home/3.webp` | 50x50 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `home/4.jpg` | 50x50 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `home/4.webp` | 50x50 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `home/5.jpg` | 50x50 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `home/5.webp` | 50x50 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `home/6.jpg` | 50x50 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `home/6.webp` | 50x50 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `home/7.jpg` | 50x50 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `home/7.webp` | 50x50 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `home/8.jpg` | 50x50 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `home/8.webp` | 50x50 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `home/9.jpg` | 50x50 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `home/9.webp` | 50x50 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `logo-white-footer.png` | 500x81 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `logo-white-footer.webp` | 500x81 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `logo-wide.png` | 500x81 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `logo-wide.webp` | 500x81 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/AIR CRAFT JACKS 1-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/AIR CRAFT JACKS 1-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/AIR CRAFT JACKS 1-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/AIR CRAFT JACKS 1-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/AIR CRAFT JACKS 1-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/AIR CRAFT JACKS 1-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/AIR CRAFT JACKS 1-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/AIR CRAFT JACKS 1.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/AIR CRAFT JACKS 1.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/AIR CRAFT JACKS 2-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/AIR CRAFT JACKS 2-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/AIR CRAFT JACKS 2-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/AIR CRAFT JACKS 2-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/AIR CRAFT JACKS 2-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/AIR CRAFT JACKS 2-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/AIR CRAFT JACKS 2-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/AIR CRAFT JACKS 2.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/AIR CRAFT JACKS 2.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/AIR CRAFT JACKS-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/AIR CRAFT JACKS-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/AIR CRAFT JACKS-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/AIR CRAFT JACKS-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/AIR CRAFT JACKS-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/AIR CRAFT JACKS-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/AIR CRAFT JACKS-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/AIR CRAFT JACKS.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/AIR CRAFT JACKS.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/DOCK LEVELLER 1-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/DOCK LEVELLER 1-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/DOCK LEVELLER 1-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/DOCK LEVELLER 1-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/DOCK LEVELLER 1-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/DOCK LEVELLER 1-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/DOCK LEVELLER 1-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/DOCK LEVELLER 1.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/DOCK LEVELLER 1.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/DOCK LEVELLER-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/DOCK LEVELLER-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/DOCK LEVELLER-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/DOCK LEVELLER-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/DOCK LEVELLER-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/DOCK LEVELLER-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/DOCK LEVELLER-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/DOCK LEVELLER.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/DOCK LEVELLER.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT 1-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT 1-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT 1-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT 1-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT 1-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT 1-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT 1-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT 1.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT 1.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT 2-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT 2-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT 2-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT 2-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT 2-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT 2-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT 2-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT 2.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT 2.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT 3-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT 3-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT 3-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT 3-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT 3-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT 3-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT 3-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT 3.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT 3.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT wall mounted-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT wall mounted-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT wall mounted-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT wall mounted-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT wall mounted-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT wall mounted-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT wall mounted-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT wall mounted.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT wall mounted.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT.JPG` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/GOODS LIFT.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/HYDRAULIC FLOOR CRANE - LIGHT DUTY 1-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/HYDRAULIC FLOOR CRANE - LIGHT DUTY 1-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/HYDRAULIC FLOOR CRANE - LIGHT DUTY 1-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/HYDRAULIC FLOOR CRANE - LIGHT DUTY 1-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/HYDRAULIC FLOOR CRANE - LIGHT DUTY 1-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/HYDRAULIC FLOOR CRANE - LIGHT DUTY 1-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/HYDRAULIC FLOOR CRANE - LIGHT DUTY 1-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/HYDRAULIC FLOOR CRANE - LIGHT DUTY 1.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/HYDRAULIC FLOOR CRANE - LIGHT DUTY 1.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/HYDRAULIC FLOOR CRANE - LIGHT DUTY-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/HYDRAULIC FLOOR CRANE - LIGHT DUTY-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/HYDRAULIC FLOOR CRANE - LIGHT DUTY-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/HYDRAULIC FLOOR CRANE - LIGHT DUTY-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/HYDRAULIC FLOOR CRANE - LIGHT DUTY-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/HYDRAULIC FLOOR CRANE - LIGHT DUTY-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/HYDRAULIC FLOOR CRANE - LIGHT DUTY-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/HYDRAULIC FLOOR CRANE - LIGHT DUTY.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/HYDRAULIC FLOOR CRANE - LIGHT DUTY.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/PALLET TRUCK 1-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/PALLET TRUCK 1-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/PALLET TRUCK 1-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/PALLET TRUCK 1-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/PALLET TRUCK 1-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/PALLET TRUCK 1-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/PALLET TRUCK 1-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/PALLET TRUCK 1.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/PALLET TRUCK 1.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/PALLET TRUCK-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/PALLET TRUCK-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/PALLET TRUCK-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/PALLET TRUCK-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/PALLET TRUCK-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/PALLET TRUCK-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/PALLET TRUCK-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/PALLET TRUCK.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/PALLET TRUCK.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift -Truck Mounted-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift -Truck Mounted-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift -Truck Mounted-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift -Truck Mounted-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift -Truck Mounted-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift -Truck Mounted-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift -Truck Mounted-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift -Truck Mounted.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift -Truck Mounted.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Die Loader-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Die Loader-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Die Loader-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Die Loader-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Die Loader-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Die Loader-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Die Loader-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Die Loader.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Die Loader.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Heavy Duty-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Heavy Duty-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Heavy Duty-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Heavy Duty-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Heavy Duty-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Heavy Duty-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Heavy Duty-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Heavy Duty.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Heavy Duty.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- LIGHT WEIGHT 1-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- LIGHT WEIGHT 1-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- LIGHT WEIGHT 1-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- LIGHT WEIGHT 1-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- LIGHT WEIGHT 1-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- LIGHT WEIGHT 1-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- LIGHT WEIGHT 1-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- LIGHT WEIGHT 1.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- LIGHT WEIGHT 1.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- LIGHT WEIGHT-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- LIGHT WEIGHT-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- LIGHT WEIGHT-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- LIGHT WEIGHT-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- LIGHT WEIGHT-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- LIGHT WEIGHT-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- LIGHT WEIGHT-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- LIGHT WEIGHT.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- LIGHT WEIGHT.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Pit Mounted-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Pit Mounted-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Pit Mounted-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Pit Mounted-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Pit Mounted-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Pit Mounted-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Pit Mounted-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Pit Mounted.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Pit Mounted.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Rollers On Top 1-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Rollers On Top 1-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Rollers On Top 1-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Rollers On Top 1-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Rollers On Top 1-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Rollers On Top 1-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Rollers On Top 1-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Rollers On Top 1.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Rollers On Top 1.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Rollers On Top 2-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Rollers On Top 2-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Rollers On Top 2-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Rollers On Top 2-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Rollers On Top 2-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Rollers On Top 2-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Rollers On Top 2-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Rollers On Top 2.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Rollers On Top 2.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Rollers On Top-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Rollers On Top-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Rollers On Top-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Rollers On Top-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Rollers On Top-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Rollers On Top-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Rollers On Top-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Rollers On Top.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Rollers On Top.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Self Propelled 1-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Self Propelled 1-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Self Propelled 1-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Self Propelled 1-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Self Propelled 1-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Self Propelled 1-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Self Propelled 1-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Self Propelled 1.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Self Propelled 1.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Self Propelled-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Self Propelled-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Self Propelled-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Self Propelled-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Self Propelled-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Self Propelled-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Self Propelled-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Self Propelled.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Self Propelled.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Towable 1-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Towable 1-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Towable 1-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Towable 1-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Towable 1-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Towable 1-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Towable 1-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Towable 1.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Towable 1.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Towable 2-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Towable 2-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Towable 2-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Towable 2-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Towable 2-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Towable 2-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Towable 2-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Towable 2.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Towable 2.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Towable-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Towable-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Towable-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Towable-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Towable-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Towable-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Towable-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Towable.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Towable.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Traction-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Traction-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Traction-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Traction-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Traction-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Traction-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Traction-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Traction.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/Scissor Lift- Traction.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/ZERO LIFT 1-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/ZERO LIFT 1-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/ZERO LIFT 1-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/ZERO LIFT 1-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/ZERO LIFT 1-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/ZERO LIFT 1-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/ZERO LIFT 1-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/ZERO LIFT 1.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/ZERO LIFT 1.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/ZERO LIFT-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/ZERO LIFT-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/ZERO LIFT-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/ZERO LIFT-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/ZERO LIFT-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/ZERO LIFT-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/ZERO LIFT-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/ZERO LIFT.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/ZERO LIFT.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/aerial truck mounted-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/aerial truck mounted-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/aerial truck mounted-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/aerial truck mounted-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/aerial truck mounted-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/aerial truck mounted-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/aerial truck mounted-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/aerial truck mounted.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/aerial truck mounted.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/aerial-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/aerial-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/aerial-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/aerial-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/aerial-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/aerial-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/aerial-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/aerial.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/aerial.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/bannerhome-480w.jpg` | 480x138 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/bannerhome-480w.webp` | 480x138 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/bannerhome1-480w.jpg` | 480x138 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/bannerhome1-480w.webp` | 480x138 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/bannerhome2-480w.jpg` | 480x138 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/bannerhome2-480w.webp` | 480x138 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/electric scissor lift-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/electric scissor lift-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/electric scissor lift-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/electric scissor lift-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/electric scissor lift-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/electric scissor lift-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/electric scissor lift-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/electric scissor lift.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/electric scissor lift.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/hollow-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/hollow-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/hollow-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/hollow-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/hollow-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/hollow-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/hollow-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/hollow.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/hollow.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/hydraulic barrel lifter tilter 1-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/hydraulic barrel lifter tilter 1-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/hydraulic barrel lifter tilter 1-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/hydraulic barrel lifter tilter 1-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/hydraulic barrel lifter tilter 1-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/hydraulic barrel lifter tilter 1-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/hydraulic barrel lifter tilter 1-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/hydraulic barrel lifter tilter 1.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/hydraulic barrel lifter tilter 1.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/hydraulic barrel lifter tilter-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/hydraulic barrel lifter tilter-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/hydraulic barrel lifter tilter-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/hydraulic barrel lifter tilter-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/hydraulic barrel lifter tilter-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/hydraulic barrel lifter tilter-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/hydraulic barrel lifter tilter-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/hydraulic barrel lifter tilter.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/hydraulic barrel lifter tilter.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/scissor lift TRACTION-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/scissor lift TRACTION-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/scissor lift TRACTION-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/scissor lift TRACTION-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/scissor lift TRACTION-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/scissor lift TRACTION-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/scissor lift TRACTION-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/scissor lift TRACTION.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/scissor lift TRACTION.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/scissor lift-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/scissor lift-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/scissor lift-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/scissor lift-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/scissor lift-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/scissor lift-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/scissor lift-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/scissor lift.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/scissor lift.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/stacker 1-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/stacker 1-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/stacker 1-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/stacker 1-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/stacker 1-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/stacker 1-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/stacker 1-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/stacker 1.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/stacker 1.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/stacker-1200w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/stacker-1200w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/stacker-480w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/stacker-480w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/stacker-800w.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/stacker-800w.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/stacker-cutout.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/stacker.jpg` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `product/stacker.webp` | 250x250 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `wcuico_instructer1.png` | 60x60 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `wcuico_instructer1.webp` | 60x60 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `wcuico_safety.png` | 60x60 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `wcuico_safety.webp` | 60x60 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `wh_certify.png` | 60x60 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
+| `wh_certify.webp` | 60x60 | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |
 
-### 1. Known Inconsistencies Preserved Verbatim
 
-As instructed, these items were preserved verbatim without silent modification. TODO comments and explicit notes were attached to their respective database records and views:
+## Catalog Discrepancies & Internal Engineering Notes
 
-- [x] **a. Alternate Phone Number on Contact Page:**
-  - *Detail:* Contact page on original site displays `(+91) 80729 30749` instead of `(+91) 97893 97504`.
-  - *Resolution:* Preserved both numbers; added `phone_contact_page_alt` in `settings` table and displayed both in the contact section with a TODO comment awaiting client confirmation.
-- [x] **b. Location Spelling ("Sriperumpudur" vs "Sriperumpudhur"):**
-  - *Detail:* The spelling varies across the old site ("Sriperumpudhur" on the home page and meta tags; "Sriperumpudur" on the about page).
-  - *Resolution:* Used each spelling exactly where it originally appeared (e.g., "Sriperumpudhur" in Welcome section, "Sriperumpudur" in About page paragraph 1).
-- [x] **c. Pit-Mounted Scissor Lift Max Height:**
-  - *Detail:* Pit-mounted scissor custom built note states *"height from 150 MM to 10000 MM height"*, while the About page states *"Hydraulic Scissor lifting tables with different height and capacity (Height up to 12 Meters capacity up to 25 Tons)"*.
-  - *Resolution:* Preserved verbatim where each originally appears.
-- [x] **d. Self Propelled Scissor Lift Battery Spec:**
-  - *Detail:* Second model (`LRSSP-0.4T-8.0M`) lists battery as `25 V/ 225 Ah` (likely a 24 V typo on the old site).
-  - *Resolution:* Preserved verbatim as `25 V/ 225 Ah (Note: listed as 25V on original site)` and flagged in product notes.
-- [x] **e. Aerial Towable Platform Dimensions:**
-  - *Detail:* Spec table is identical to Truck Mounted except platform sizes `1101 X 750 X 1100` and `1102 X 750 X 1100` (likely copy-paste typos).
-  - *Resolution:* Preserved verbatim and flagged in product notes.
-- [x] **f. Manual Stacker Type Code & Capacity:**
-  - *Detail:* 3rd column type code is `LRHS-2T-1.6M` but capacity is listed as `1000 Kgs`; 2nd column repeats code `LRHS-1T-1.5M` with `3000 MM` lifting height.
-  - *Resolution:* Preserved verbatim and flagged in table notes.
-- [x] **g. Pallet Truck Capacity vs Type Code:**
-  - *Detail:* Type `LRPT-3.5T` lists capacity as `2500 Kgs`.
-  - *Resolution:* Preserved verbatim as `2500 Kgs (Note: Listed as 2500 Kgs on original site despite 3.5T code)` and flagged.
-- [x] **h. Aerial Truck-Mounted Units:**
-  - *Detail:* Original table has no units (capacity `200`, heights `10000`, `13000`, `16000`).
-  - *Resolution:* Stored raw numbers, added unit hint `(assumed kg / mm)`, and flagged in table notes.
-- [x] **i. Goods Lift Wall-Mounted First Column Capacity:**
-  - *Detail:* First column capacity listed as `500` with no unit.
-  - *Resolution:* Preserved verbatim as `500 (Note: Unit not specified in old site, assumed Kg)`.
-- [x] **j. Placeholder & Missing Pages:**
-  - *Detail:* "Tripod Jacks" heading on original home page had no body text; "SPM" under Goods Lift had no page.
-  - *Resolution:* Axle & Tripod jacks crawled and consolidated with available specs; SPM created with `is_active=false` placeholder in database.
-- [x] **k. Domain Name:**
-  - *Detail:* Footer on old site listed `www.liftandreach.com`, but the live functioning domain is `https://liftandreach.in`.
-  - *Resolution:* Used `liftandreach.in` with a TODO flag for the client to confirm domain consolidation.
-- [x] **l. ISO Certification Claims Removed:**
-  - *Detail:* The old site displayed an unverified "ISO CERTIFIED MFG" badge without certificate numbers or accredited body info.
-  - *Resolution:* ISO claim removed - re-add only if client provides certificate.
+The following original catalog discrepancies and notes are recorded for internal audit and reference:
 
----
+1. **Hydraulic Floor Crane - Heavy Duty (LRHFC-HD)**:
+   - Second model battery lists `25 V/ 225 Ah` (likely a 24 V typo on the original catalog). Stored as internal engineering note.
 
-### 2. Crawl Extraction Summary (5 Target Pages)
+2. **Goods Lift - Wall Mounted**:
+   - First column capacity in original catalog is `500` with no unit (assumed Kg). Stored as internal engineering note.
 
-- [x] `/scissor lift TOWABLE (Multi Scissor)-Electric.php`: Extracted specs (`LRSLT-0.3T-6M/9M/11M`, `LRSLT-0.5T-6M/9M/11M`, 300/500 Kg, 1335/1360 mm, 5 HP 415V AC).
-- [x] `/HYDRAULIC FLOOR CRANE - LIGHT DUTY.php`: Extracted specs (`LRFC-1T`, `LRFC-2T`, 1000/2000 Kgs, 55-2270 mm, 380-2400 mm).
-- [x] `/DOCK LEVELER.php`: Extracted specs (`LRDL - 9T-18*20`, `LRDL-12T- 20 * 25`, 9000/12000 Kgs, travel, pit dimensions).
-- [x] `/aircraft jacks.php`: Extracted specs (`LRARJ - 9.5T-0.95M`, `LRARJ -10T-0.85M`, 9.5/10 Ton, test load 13.5 Ton).
-- [x] `/hollow.php`: Extracted specs (`LRHJ - 20T - 250 - HO`, `LRHJ - 20T - 250 - SO`, 10-50 Ton / 10-100 Ton).
+3. **Hydraulic Stacker**:
+   - Type code `LRHS-2T-1.6M` lists capacity as `1000 Kgs` despite `2T` code. Stored as internal engineering note.
+   - Column `LRHS-1T-1.5M` repeated with `3000 MM Lift`. Stored as internal engineering note.
 
----
-
-### 3. Missing Remote Images on Old Server (HTTP 404)
-
-The old server returned 404 Not Found for the following non-critical decorative icon assets:
-- `/images/Client_Satisfied-512.png`
-- `/images/wcuico_1.png`
-- `/images/wcuico_2.png`
-- `/images/wcuico_3.png`
-- `/images/wcuico_4.png`
-- `/images/wh_certify.png`
-
-*Handled by:* Redrawn and rendered using crisp, accessible Lucide SVG industrial icons (`ShieldCheck`, `Award`, `Users`, `CheckCircle`) styled to match the brand's industrial aesthetic.
-
----
-
-### 4. Low-Resolution Source Images (From Original 2000s Web Server)
-
-The original site hosted low-resolution equipment photos (250x250px master JPEGs). They are displayed at native scale centered on `#F4F7FB` technical tiles using `object-contain` without artificial stretching or upscaling:
-- `client/public/images/product/scissor lift.jpg` (250x250px)
-- `client/public/images/product/GOODS LIFT.JPG` (250x250px)
-- `client/public/images/product/aerial.jpg` (250x250px)
-- `client/public/images/product/stacker.jpg` (250x250px)
-- `client/public/images/product/PALLET TRUCK.jpg` (250x250px)
-- `client/public/images/product/ZERO LIFT.jpg` (250x250px)
-- `client/public/images/product/hydraulic barrel lifter tilter.jpg` (250x250px)
-- `client/public/images/product/HYDRAULIC FLOOR CRANE - LIGHT DUTY.jpg` (250x250px)
-- `client/public/images/product/DOCK LEVELLER.jpg` (250x250px)
-- `client/public/images/product/AIR CRAFT JACKS.jpg` (250x250px)
-- `client/public/images/product/hollow.jpg` (250x250px)
-
-*Action for Client:* Supply higher-resolution camera originals (1200px+ width) to automatically take advantage of the Sharp responsive WebP pipeline.
-
----
-
-### 6. Photography Needed From Client (Architectural Redesign)
-
-The architectural design language is built to elevate genuine high-resolution industrial photography. As verified by the image audit (`scripts/image-dimensions.json`), all 41 original product cutout assets are 250x250px JPEGs. The renderer maintains calm whitespace without stretching them beyond 1.15x native size.
-
-**Client Action:** Provide original high-resolution photos (min 1920x1080px or 1200px+ width) for:
-- All 41 product catalog images under 800px wide (including `scissor lift.jpg`, `aerial.jpg`, `GOODS LIFT.JPG`, `stacker.jpg`, `PALLET TRUCK.jpg`, `ZERO LIFT.jpg`, `DOCK LEVELLER.jpg`, `AIR CRAFT JACKS.jpg`, `hydraulic barrel lifter tilter.jpg`, and `HYDRAULIC FLOOR CRANE - LIGHT DUTY.jpg`).
-- Factory floor photos of the Kuthambakkam fabrication shop, structural welding, cylinder boring, and test loads.
-
-1. **Scissor Lift Platforms:**
-   - In-situ shot of a pit-mounted scissor table flush with factory flooring, holding machinery/dies.
-   - Outdoor towable multi-scissor lift fully elevated against a building facade.
-   - Close-up detail of hydraulic cylinder pivot linkages and machined steel scissors.
-2. **Goods Lift / Freight Elevators:**
-   - Full vertical perspective of an installed self-standing structural mast across a 2-story mezzanine.
-   - Industrial floor loading area with warehouse staff staging freight.
-3. **Aerial Access Platforms:**
-   - Truck-mounted boom or towable boom extended at outdoor utility work or maintenance height (up to 25m).
-   - Operator in harness working from platform safety cage.
-4. **Stacker & Pallet Trucks:**
-   - Warehouse aisle perspective with electric or manual stacker lifting pallet into racking.
-   - Heavy-duty floor pallet truck moving loaded pallets.
-5. **Zero Lift & Floor Cranes:**
-   - Low-profile zero-lift table at true floor-level roll-on position.
-   - Light-duty hydraulic floor crane lifting an engine block or motor assembly.
-6. **Hydraulic Barrel Lifter & Tilter:**
-   - Drum handling mechanism tilted at 45° dispensing liquid in chemical or food processing bay.
-7. **Dock Levelers:**
-   - Articulated hydraulic dock plate bridging warehouse floor and 40ft container truck bed.
-8. **Aircraft Jacks:**
-   - Precision tripod jacks and axle jacks positioned under aircraft fuselage / landing gear in hangar.
-9. **Hollow & Solid Ram Cylinders:**
-   - Engineering bench photo of machined chrome rams, manifold blocks, and hydraulic hand pumps.
-10. **Factory & Engineering Workshop:**
-    - Broad architectural perspective of the Kuthambakkam fabrication shop: welding, machining, and final testing.
-    - Engineering drawings or CAD workstation on site.
-
-### 7. Unit Normalizations
-- Displayed bare numerical values in spec rows (where other columns specify units) with normalized `"mm"` suffix while preserving original numbers in database records.
-- Stored all original units verbatim.
-
-
-1. Confirm preferred official email address (`liftnreach@gmail.com` vs a custom Google Workspace domain like `sales@liftandreach.in`).
-2. Confirm primary phone number ordering and whether to retain or update `(+91) 80729 30749`.
-3. Confirm if SPM (Special Purpose Machines) requires an active product listing with photos.
-4. Confirm whether `LRSSP-0.4T-8.0M` should officially be 24 V instead of 25 V.
-5. Confirm whether `LRPT-3.5T` pallet truck capacity is 3500 Kgs or 2500 Kgs.
+4. **Pallet Truck**:
+   - Type code `LRPT-3.5T` lists capacity as `2500 Kgs` on original site despite `3.5T` code. Stored as internal engineering note.

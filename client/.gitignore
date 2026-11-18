@@ -1,0 +1,21 @@
+node_modules
+# Keep environment variables out of version control
+.env
+
+/generated/prisma
+
+# Build output
+dist/
+
+# Vite cache
+.vite/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/

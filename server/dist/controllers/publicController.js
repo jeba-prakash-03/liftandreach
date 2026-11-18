@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.submitEnquiry = exports.getPageBySlug = exports.getHeroSlides = exports.getSettings = exports.generateDatasheetPdf = exports.getProductBySlug = exports.getProducts = exports.getCategories = void 0;
+exports.getSiteContent = exports.submitEnquiry = exports.getPageBySlug = exports.getHeroSlides = exports.getSettings = exports.generateDatasheetPdf = exports.getProductBySlug = exports.getProducts = exports.getCategories = void 0;
 const prisma_1 = __importDefault(require("../utils/prisma"));
 const zod_1 = require("zod");
 const captcha_1 = require("../utils/captcha");
@@ -442,3 +442,29 @@ const submitEnquiry = async (req, res) => {
     }
 };
 exports.submitEnquiry = submitEnquiry;
+// GET /api/site-content
+const getSiteContent = async (req, res) => {
+    try {
+        const rows = (await prisma_1.default.$queryRawUnsafe('SELECT section, data FROM site_content'));
+        const result = {};
+        for (const r of rows) {
+            if (typeof r.data === 'string') {
+                try {
+                    result[r.section] = JSON.parse(r.data);
+                }
+                catch {
+                    result[r.section] = r.data;
+                }
+            }
+            else {
+                result[r.section] = r.data;
+            }
+        }
+        res.json(result);
+    }
+    catch (error) {
+        console.error('Error fetching site-content:', error);
+        res.status(500).json({ error: 'Failed to load site content' });
+    }
+};
+exports.getSiteContent = getSiteContent;

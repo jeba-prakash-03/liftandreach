@@ -1,17 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import { useApp } from '../context/AppContext';
+import { useAppStore } from '../store/useAppStore';
 import { ArrowUp } from 'lucide-react';
 
 export const FloatingWidgets: React.FC = () => {
   const { settings } = useApp();
+  const isMobileMenuOpen = useAppStore((state) => state.isMobileMenuOpen);
+  const isEnquiryDrawerOpen = useAppStore((state) => state.isEnquiryDrawerOpen);
+  const quickViewProductSlug = useAppStore((state) => state.quickViewProductSlug);
   const [showBackToTop, setShowBackToTop] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  // Hide floating widgets whenever mobile menu or modal drawers are open
+  const shouldHide = isMobileMenuOpen || isEnquiryDrawerOpen || !!quickViewProductSlug;
 
   useEffect(() => {
     const handleScroll = () => {
-      // Rule 6: Back-to-top appears only after 600px scroll
-      setShowBackToTop(window.scrollY > 600);
+      const scrollY = window.scrollY;
+      setShowBackToTop(scrollY > 600);
+
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (totalHeight > 0) {
+        setScrollProgress(Math.min(100, Math.max(0, (scrollY / totalHeight) * 100)));
+      }
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -19,39 +32,68 @@ export const FloatingWidgets: React.FC = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const whatsappNumber = settings.whatsapp || '918939359592';
+  const whatsappNumber = (settings.whatsapp || '918939359592').replace(/[^0-9]/g, '');
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
     'Hello Lift and Reach Equipments, I am inquiring about your hydraulic lifting equipment.'
   )}`;
 
+  // Dash calculations for 44px circle (radius = 18, circumference = 2 * PI * 18 = 113.1)
+  const strokeDashoffset = 113.1 - (113.1 * scrollProgress) / 100;
+
   return (
-    <div className="fixed bottom-6 right-6 z-40 flex flex-col items-end pointer-events-none">
+    <div
+      className={`fixed bottom-5 right-5 z-40 flex flex-col items-center gap-3 pointer-events-none transition-all duration-300 ${
+        shouldHide ? 'opacity-0 translate-y-4 pointer-events-none' : 'opacity-100 translate-y-0'
+      }`}
+      id="floating-widgets-container"
+    >
       {/* 
-        Rule 6: Back-to-top appears only after 600px scroll, 44px,
-        placed 16px ABOVE the WhatsApp button so they never overlap.
-        Uses outline style for back-to-top.
+        Single Back-to-top button: 44px circle with progress ring,
+        appears after 600px scroll, positioned 16px above WhatsApp button (gap-4 = 16px).
       */}
       {showBackToTop && (
         <button
           onClick={scrollToTop}
           aria-label="Back to top"
-          className="pointer-events-auto mb-4 w-[44px] h-[44px] rounded-[2px] bg-[#F6F4F0] text-[#15191E] flex items-center justify-center border border-[#15191E] hover:bg-[#15191E] hover:text-[#F6F4F0] transition-colors cursor-pointer shadow-sm"
+          className="pointer-events-auto relative w-[44px] h-[44px] rounded-full bg-white text-[#0B1220] flex items-center justify-center border border-[#E3E8F0] shadow-md hover:bg-[#F3F5F8] transition-colors cursor-pointer"
         >
-          <ArrowUp className="w-4 h-4 stroke-[1.25]" />
+          {/* Progress circle */}
+          <svg className="absolute inset-0 w-full h-full -rotate-90 pointer-events-none" viewBox="0 0 44 44">
+            <circle
+              cx="22"
+              cy="22"
+              r="18"
+              fill="none"
+              stroke="#E3E8F0"
+              strokeWidth="2.5"
+            />
+            <circle
+              cx="22"
+              cy="22"
+              r="18"
+              fill="none"
+              stroke="#2A62C9"
+              strokeWidth="2.5"
+              strokeDasharray="113.1"
+              strokeDashoffset={strokeDashoffset}
+              strokeLinecap="round"
+            />
+          </svg>
+          <ArrowUp className="w-4 h-4 stroke-[2] text-[#0B1220]" />
         </button>
       )}
 
       {/* 
-        Rule 6: Proper WhatsApp SVG glyph, 26px, white on --charcoal square 52px, 2px radius
+        WhatsApp button: 52px circle, brand blue (#2A62C9), white glyph
       */}
       <a
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
-        className="pointer-events-auto group relative flex items-center justify-center w-[52px] h-[52px] rounded-[2px] bg-[#15191E] text-white hover:bg-[#1F4E96] transition-all cursor-pointer shadow-md"
+        className="pointer-events-auto group relative flex items-center justify-center w-[52px] h-[52px] rounded-full bg-[#2A62C9] text-white hover:bg-[#1E4E96] transition-all cursor-pointer shadow-lg"
       >
-        <span className="absolute right-full mr-3 px-2.5 py-1 bg-[#15191E] text-[#F6F4F0] text-xs font-body rounded-[2px] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+        <span className="absolute right-full mr-3 px-2.5 py-1 bg-[#0E1A33] text-white text-xs rounded-full whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-md">
           WhatsApp Inquiries
         </span>
         <svg

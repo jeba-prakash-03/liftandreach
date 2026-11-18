@@ -32,6 +32,9 @@ router.delete('/hero-slides/:id', auth_1.authenticateAdmin, adminController_1.ad
 // Settings and Pages
 router.put('/settings', auth_1.authenticateAdmin, adminController_1.adminUpdateSettings);
 router.put('/pages/:slug', auth_1.authenticateAdmin, adminController_1.adminUpdatePage);
+// Site Content (Dynamic sections)
+router.get('/site-content', auth_1.authenticateAdmin, adminController_1.adminGetSiteContent);
+router.put('/site-content/:section', auth_1.authenticateAdmin, adminController_1.adminUpdateSiteContent);
 // Image Upload
 router.post('/upload', auth_1.authenticateAdmin, uploadController_1.upload.single('image'), uploadController_1.handleImageUpload);
 exports.default = router;

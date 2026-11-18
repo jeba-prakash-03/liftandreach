@@ -7,6 +7,8 @@ import { Toaster } from 'sonner';
 import { UtilityBar } from './v3/components/UtilityBar';
 import { Header } from './v3/components/Header';
 import { Footer } from './v3/components/Footer';
+import { HeaderV4 } from './ui-v4/components/HeaderV4';
+import { FooterV4 } from './ui-v4/components/FooterV4';
 import { QuoteModal } from './components/QuoteModal';
 import { FloatingWidgets } from './components/FloatingWidgets';
 import { LegacyUrlRedirect } from './components/LegacyUrlRedirect';
@@ -16,16 +18,21 @@ import { CompareDialog } from './components/CompareDialog';
 import { CommandPaletteModal } from './components/CommandPaletteModal';
 import { FindMyLiftWizard } from './components/FindMyLiftWizard';
 import { TopProgressBar } from './components/TopProgressBar';
-import { BackToTopButton } from './components/BackToTopButton';
 import { PageSkeleton } from './components/PageSkeleton';
 import { RouteTransition } from './components/RouteTransition';
+import { HeaderToneCtx, Tone } from './ui-v4/hooks/useHeaderTone';
 
 // Code-split pages with React.lazy
-const HomePage = lazy(() => import('./v3/pages/HomePage').then((m) => ({ default: m.HomePage })));
-const AboutPage = lazy(() => import('./pages/AboutPage').then((m) => ({ default: m.AboutPage })));
-const ProductsPage = lazy(() => import('./pages/ProductsPage').then((m) => ({ default: m.ProductsPage })));
-const ProductDetailPage = lazy(() => import('./pages/ProductDetailPage').then((m) => ({ default: m.ProductDetailPage })));
-const ContactPage = lazy(() => import('./pages/ContactPage').then((m) => ({ default: m.ContactPage })));
+const HomePageLegacy = lazy(() => import('./v3/pages/HomePage').then((m) => ({ default: m.HomePage })));
+const HomePageV4 = lazy(() => import('./ui-v4/pages/HomeV4').then((m) => ({ default: m.HomeV4 })));
+const AboutPageLegacy = lazy(() => import('./pages/AboutPage').then((m) => ({ default: m.AboutPage })));
+const AboutPageV4 = lazy(() => import('./ui-v4/pages/AboutPageV4').then((m) => ({ default: m.AboutPageV4 })));
+const ProductsPageLegacy = lazy(() => import('./pages/ProductsPage').then((m) => ({ default: m.ProductsPage })));
+const ProductsPageV4 = lazy(() => import('./ui-v4/pages/ProductsPageV4').then((m) => ({ default: m.ProductsPageV4 })));
+const ProductDetailPageLegacy = lazy(() => import('./pages/ProductDetailPage').then((m) => ({ default: m.ProductDetailPage })));
+const ProductDetailPageV4 = lazy(() => import('./ui-v4/pages/ProductDetailPageV4').then((m) => ({ default: m.ProductDetailPageV4 })));
+const ContactPageLegacy = lazy(() => import('./pages/ContactPage').then((m) => ({ default: m.ContactPage })));
+const ContactPageV4 = lazy(() => import('./ui-v4/pages/ContactPageV4').then((m) => ({ default: m.ContactPageV4 })));
 const AdminPage = lazy(() => import('./pages/AdminPage').then((m) => ({ default: m.AdminPage })));
 const DesignSystemPage = lazy(() => import('./pages/DesignSystemPage').then((m) => ({ default: m.DesignSystemPage })));
 
@@ -38,14 +45,20 @@ const queryClient = new QueryClient({
   }
 });
 
+const isV4 = import.meta.env.VITE_UI_VERSION !== 'legacy';
+
 const PublicLayout: React.FC<{
   onOpenCommandPalette: () => void;
   onOpenWizard: () => void;
 }> = ({ onOpenCommandPalette, onOpenWizard }) => {
   return (
-    <div className="min-h-screen flex flex-col justify-between w-full overflow-x-hidden">
-      <UtilityBar />
-      <Header onOpenCommandPalette={onOpenCommandPalette} onOpenWizard={onOpenWizard} />
+    <div className="min-h-[100dvh] flex flex-col justify-between w-full overflow-x-clip bg-[#F3F5F8]">
+      {!isV4 && <UtilityBar />}
+      {isV4 ? (
+        <HeaderV4 onOpenCommandPalette={onOpenCommandPalette} onOpenWizard={onOpenWizard} />
+      ) : (
+        <Header onOpenCommandPalette={onOpenCommandPalette} onOpenWizard={onOpenWizard} />
+      )}
       <main className="flex-1 w-full flex flex-col">
         <Suspense fallback={<PageSkeleton />}>
           <RouteTransition>
@@ -53,13 +66,12 @@ const PublicLayout: React.FC<{
           </RouteTransition>
         </Suspense>
       </main>
-      <Footer />
+      {isV4 ? <FooterV4 /> : <Footer />}
       <QuoteModal />
       <FloatingWidgets />
       <EnquiryDrawer />
       <QuickViewDrawer />
       <CompareDialog />
-      <BackToTopButton />
     </div>
   );
 };
@@ -67,6 +79,7 @@ const PublicLayout: React.FC<{
 export const App: React.FC = () => {
   const [commandPaletteOpen, setCommandPaletteOpen] = useState(false);
   const [wizardOpen, setWizardOpen] = useState(false);
+  const [headerTone, setHeaderTone] = useState<Tone>('light');
 
   // Global Ctrl+K / Cmd+K listener
   useEffect(() => {
@@ -82,7 +95,8 @@ export const App: React.FC = () => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <LazyMotion features={domAnimation}>
+      <HeaderToneCtx.Provider value={{ tone: headerTone, setTone: setHeaderTone }}>
+        <LazyMotion features={domAnimation}>
         <TopProgressBar />
         <LegacyUrlRedirect>
             <Routes>
@@ -113,18 +127,18 @@ export const App: React.FC = () => {
                   />
                 }
               >
-                <Route path="/" element={<HomePage />} />
-                <Route path="/about" element={<AboutPage />} />
+                <Route path="/" element={isV4 ? <HomePageV4 onOpenWizard={() => setWizardOpen(true)} /> : <HomePageLegacy />} />
+                <Route path="/about" element={isV4 ? <AboutPageV4 /> : <AboutPageLegacy />} />
                 <Route path="/design-system" element={<DesignSystemPage />} />
 
                 {/* Product routes */}
-                <Route path="/products" element={<ProductsPage />} />
-                <Route path="/products/:category" element={<ProductsPage />} />
-                <Route path="/products/:category/:slug" element={<ProductDetailPage />} />
-                <Route path="/products/:category/:sub/:slug" element={<ProductDetailPage />} />
+                <Route path="/products" element={isV4 ? <ProductsPageV4 /> : <ProductsPageLegacy />} />
+                <Route path="/products/:category" element={isV4 ? <ProductsPageV4 /> : <ProductsPageLegacy />} />
+                <Route path="/products/:category/:slug" element={isV4 ? <ProductDetailPageV4 /> : <ProductDetailPageLegacy />} />
+                <Route path="/products/:category/:sub/:slug" element={isV4 ? <ProductDetailPageV4 /> : <ProductDetailPageLegacy />} />
 
-                <Route path="/contact" element={<ContactPage />} />
-                <Route path="*" element={<ProductDetailPage />} />
+                <Route path="/contact" element={isV4 ? <ContactPageV4 /> : <ContactPageLegacy />} />
+                <Route path="*" element={isV4 ? <ProductDetailPageV4 /> : <ProductDetailPageLegacy />} />
               </Route>
             </Routes>
 
@@ -138,7 +152,8 @@ export const App: React.FC = () => {
             {/* Accessible Sonner Toasts */}
             <Toaster position="bottom-right" richColors />
           </LegacyUrlRedirect>
-      </LazyMotion>
+        </LazyMotion>
+      </HeaderToneCtx.Provider>
     </QueryClientProvider>
   );
 };

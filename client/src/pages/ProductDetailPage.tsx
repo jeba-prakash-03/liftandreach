@@ -36,7 +36,6 @@ export const ProductDetailPage: React.FC = () => {
   const [activeModelIndex, setActiveModelIndex] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [showStickyBar, setShowStickyBar] = useState(false);
-  const [downloadingPdf, setDownloadingPdf] = useState(false);
 
   // Hover zoom lens state
   const [zoomPos, setZoomPos] = useState<{ x: number; y: number } | null>(null);
@@ -68,16 +67,6 @@ export const ProductDetailPage: React.FC = () => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const handleDownloadPdf = () => {
-    if (!product) return;
-    setDownloadingPdf(true);
-    toast.info('Preparing engineering datasheet PDF...');
-    setTimeout(() => {
-      setDownloadingPdf(false);
-      window.open(`/api/products/${product.slug}/datasheet`, '_blank');
-    }, 600);
-  };
 
   if (loading) {
     return (
@@ -337,16 +326,6 @@ export const ProductDetailPage: React.FC = () => {
               >
                 <ShoppingBag className="w-4 h-4 stroke-[1.5] text-[#1F4E96]" />
                 <span>{isInBasket ? 'In enquiry list' : 'Add to enquiry'}</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={handleDownloadPdf}
-                disabled={downloadingPdf}
-                className="inline-flex items-center gap-2 text-[14px] font-medium text-[#7C8794] hover:text-[#15191E] transition-colors py-2 px-3 border border-[#D5CFC5] bg-white cursor-pointer"
-              >
-                <FileDown className="w-4 h-4 stroke-[1.5]" />
-                <span>{downloadingPdf ? 'Generating...' : 'PDF Datasheet'}</span>
               </button>
 
               <a

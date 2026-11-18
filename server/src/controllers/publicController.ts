@@ -463,3 +463,26 @@ export const submitEnquiry = async (req: Request, res: Response): Promise<void> 
     res.status(500).json({ error: 'Failed to submit your enquiry. Please call or email directly.' });
   }
 };
+
+// GET /api/site-content
+export const getSiteContent = async (req: Request, res: Response) => {
+  try {
+    const rows = (await prisma.$queryRawUnsafe('SELECT section, data FROM site_content')) as { section: string; data: any }[];
+    const result: Record<string, any> = {};
+    for (const r of rows) {
+      if (typeof r.data === 'string') {
+        try {
+          result[r.section] = JSON.parse(r.data);
+        } catch {
+          result[r.section] = r.data;
+        }
+      } else {
+        result[r.section] = r.data;
+      }
+    }
+    res.json(result);
+  } catch (error) {
+    console.error('Error fetching site-content:', error);
+    res.status(500).json({ error: 'Failed to load site content' });
+  }
+};

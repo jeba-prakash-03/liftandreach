@@ -22,6 +22,7 @@ router.get('/products/:slug', publicController_1.getProductBySlug);
 router.get('/settings', publicController_1.getSettings);
 router.get('/hero-slides', publicController_1.getHeroSlides);
 router.get('/pages/:slug', publicController_1.getPageBySlug);
+router.get('/site-content', publicController_1.getSiteContent);
 router.get('/captcha', captcha_1.generateCaptcha);
 router.post('/enquiries', enquiryLimiter, publicController_1.submitEnquiry);
 exports.default = router;

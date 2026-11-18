@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "./v3/styles/tokens.css";
+@import "./ui-v4/styles/tokens.css";
 
 /* -------------------------------------------------------------
    COMPACT & CLEAN ARCHITECTURAL DESIGN SYSTEM (FIXED TOKENS)
@@ -125,7 +126,20 @@
   }
 }
 
+html {
+  overflow-x: clip;
+  background-color: #0E1A33;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
+  overflow-x: clip;
   background-color: var(--paper);
   color: var(--charcoal);
   font-family: var(--font-body);
@@ -155,8 +169,8 @@ h1, .text-hero, .text-h1 {
   font-variant-numeric: tabular-nums;
 }
 
-/* Hard limit: NO section may exceed 64px top/bottom padding */
-section {
+/* Hard limit: default content sections get standard spacing unless overridden by hero/page-band */
+section:not([data-header-tone="dark"]):not(.hero):not(.page-band):not([data-no-section-pad]) {
   padding-top: var(--section-y);
   padding-bottom: var(--section-y);
 }

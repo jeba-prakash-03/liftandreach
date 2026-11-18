@@ -433,3 +433,36 @@ export const adminUpdatePage = async (req: Request, res: Response) => {
     res.status(500).json({ error: 'Failed to update page.' });
   }
 };
+
+// GET /api/admin/site-content
+export const adminGetSiteContent = async (req: Request, res: Response) => {
+  try {
+    const rows = (await prisma.$queryRawUnsafe('SELECT section, data FROM site_content')) as { section: string; data: any }[];
+    const result: Record<string, any> = {};
+    for (const r of rows) {
+      result[r.section] = typeof r.data === 'string' ? JSON.parse(r.data) : r.data;
+    }
+    res.json(result);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to load site content' });
+  }
+};
+
+// PUT /api/admin/site-content/:section
+export const adminUpdateSiteContent = async (req: Request, res: Response) => {
+  try {
+    const section = req.params.section as string;
+    const data = req.body;
+    const jsonStr = JSON.stringify(data);
+    await prisma.$executeRawUnsafe(
+      'INSERT INTO site_content (section, data) VALUES (?, ?) ON DUPLICATE KEY UPDATE data = ?',
+      section,
+      jsonStr,
+      jsonStr
+    );
+    res.json({ success: true, section, data });
+  } catch (error) {
+    console.error('Failed to update site content:', error);
+    res.status(500).json({ error: 'Failed to update section content' });
+  }
+};

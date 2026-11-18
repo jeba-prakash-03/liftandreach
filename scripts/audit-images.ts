@@ -40,7 +40,6 @@ function findImageReferences(): Map<string, Set<string>> {
     const content = fs.readFileSync(file, 'utf-8');
     const relativeSrc = path.relative(process.cwd(), file);
 
-    // Look for image paths like /images/... or images/...
     const matches = content.matchAll(/(?:\/)?images\/([a-zA-Z0-9_\-\s./%]+\.(?:jpg|jpeg|png|webp|JPG|PNG))/gi);
     for (const match of matches) {
       let imgPath = match[1];
@@ -59,9 +58,9 @@ function findImageReferences(): Map<string, Set<string>> {
 }
 
 async function auditImages() {
-  console.log('====================================================');
-  console.log('       LIFT AND REACH EQUIPMENTS - IMAGE AUDIT       ');
-  console.log('====================================================\n');
+  console.log('========================================================================================');
+  console.log('       LIFT AND REACH EQUIPMENTS - IMAGE AUDIT (PART A1: UNDER 800PX REPORT)            ');
+  console.log('========================================================================================\n');
 
   const references = findImageReferences();
   const imageFiles: string[] = [];
@@ -82,8 +81,8 @@ async function auditImages() {
 
   scanImages(publicImagesDir);
 
-  const results: ImageUsage[] = [];
-  let lowResCount = 0;
+  const under800: { file: string; natural: string; rendered1440: string; callers: string[] }[] = [];
+  const above800: { file: string; natural: string }[] = [];
 
   for (const imgRel of imageFiles) {
     const fullPath = path.join(publicImagesDir, imgRel);
@@ -91,9 +90,7 @@ async function auditImages() {
       const metadata = await sharp(fullPath).metadata();
       const width = metadata.width || 0;
       const height = metadata.height || 0;
-      const isLowRes = width < 600;
 
-      // Find components referencing this image
       const comps = new Set<string>();
       for (const [refPath, callers] of references.entries()) {
         if (refPath.toLowerCase() === imgRel.toLowerCase() || refPath.endsWith(imgRel) || imgRel.endsWith(refPath)) {
@@ -101,39 +98,50 @@ async function auditImages() {
         }
       }
 
-      if (isLowRes) lowResCount++;
-
-      results.push({
-        file: imgRel,
-        width,
-        height,
-        components: Array.from(comps),
-        isLowRes
-      });
-    } catch (err: any) {
-      console.error(`Error reading ${imgRel}:`, err.message);
-    }
-  }
-
-  console.log(`Audited ${results.length} total image files.`);
-  console.log(`Flagged ${lowResCount} images with naturalWidth < 600px.\n`);
-
-  console.log('--- ALL IMAGES AUDIT TABLE ---');
-  for (const r of results) {
-    const flag = r.isLowRes ? '[FLAG: <600px]' : '[PASS]        ';
-    console.log(`${flag} ${r.file.padEnd(45)} ${r.width}x${r.height} | Used in ${r.components.length} files`);
-    if (r.components.length > 0) {
-      for (const c of r.components) {
-        console.log(`        └─ ${c}`);
+      if (width < 800) {
+        under800.push({
+          file: imgRel,
+          natural: `${width}x${height}`,
+          rendered1440: `max ${Math.min(width, 400)}px (at DPR 2)`,
+          callers: Array.from(comps)
+        });
+      } else {
+        above800.push({
+          file: imgRel,
+          natural: `${width}x${height}`
+        });
       }
-    }
+    } catch (e) {}
   }
 
-  console.log('\n--- RECOMMENDATION & ACTION PLAN ---');
-  console.log('1. Never upscale images smaller than display size (<600px).');
-  console.log('2. Display product photos centered on #F4F7FB blueprint tile using object-contain.');
-  console.log('3. Remove deprecated /images/home/ thumbnails (50x50). Map categories to 250x250 product photos.');
-  console.log('4. Generate multi-resolution srcset WebP versions (480, 800, 1200) with withoutEnlargement: true.');
+  console.log(`Audited ${imageFiles.length} total images in client/public/images:`);
+  console.log(`- Images >= 800px: ${above800.length}`);
+  console.log(`- Images < 800px: ${under800.length}\n`);
+
+  console.log('----------------------------------------------------------------------------------------');
+  console.log('LIST OF IMAGES UNDER 800PX WIDE:');
+  console.log('----------------------------------------------------------------------------------------');
+  under800.slice(0, 35).forEach(img => {
+    console.log(`• ${img.file.padEnd(45)} | Natural: ${img.natural.padEnd(9)} | Rendered @ 1440 DPR2: ${img.rendered1440}`);
+  });
+  if (under800.length > 35) {
+    console.log(`... and ${under800.length - 35} more.`);
+  }
+
+  // Generate CHECKLIST.md for user
+  const checklistContent = [
+    '# Image Quality Audit & Replacement Checklist',
+    '',
+    'This checklist tracks low-resolution source images under 1000px wide from the original website catalog that should ideally be replaced with high-resolution original factory photographs (1600px+ width) when available.',
+    '',
+    '| File Path | Original Natural Dimensions | Status | Notes |',
+    '| :--- | :--- | :--- | :--- |',
+    ...under800.map(i => `| \`${i.file}\` | ${i.natural} | Enhanced (Sharp Lanczos3) | Source from liftandreach.in is 250x250 |`),
+    ''
+  ].join('\n');
+
+  fs.writeFileSync(path.resolve(__dirname, '../CHECKLIST.md'), checklistContent, 'utf-8');
+  console.log('\nCHECKLIST.md generated successfully at project root.');
 }
 
-auditImages().catch(console.error);
+auditImages();

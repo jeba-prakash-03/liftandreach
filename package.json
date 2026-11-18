@@ -10,7 +10,8 @@
     "build": "npm run build:server && npm run build:client",
     "start:server": "cd server && npm start",
     "seed": "cd server && npx tsx prisma/seed.ts",
-    "test": "playwright test"
+    "test": "playwright test",
+    "qa": "playwright test --workers=1 tests/w1-hero.spec.ts tests/w2-cutouts.spec.ts tests/w3-carousel.spec.ts tests/w4-results-bar.spec.ts tests/w5-highlights.spec.ts tests/w6-counts.spec.ts tests/w7-header.spec.ts tests/w8-images.spec.ts tests/w9-content.spec.ts tests/w10-admin-auth.spec.ts tests/w11-admin-categories.spec.ts tests/w12-admin-products.spec.ts tests/w13-admin-upload.spec.ts tests/w14-admin-hero.spec.ts tests/w15-admin-content.spec.ts tests/w16-admin-settings.spec.ts tests/w17-enquiries.spec.ts tests/w18-security.spec.ts tests/w19-data-driven.spec.ts tests/w20-admin-ux.spec.ts tests/w21-mobile.spec.ts"
   },
   "dependencies": {
     "@types/sharp": "^0.31.1",
