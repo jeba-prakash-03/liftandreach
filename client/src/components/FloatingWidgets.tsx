@@ -34,7 +34,7 @@ export const FloatingWidgets: React.FC = () => {
 
   const whatsappNumber = (settings.whatsapp || '918939359592').replace(/[^0-9]/g, '');
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-    'Hello Lift and Reach Equipments, I am inquiring about your hydraulic lifting equipment.'
+    'Hello Hydrelex Lift Systems, I am inquiring about your hydraulic lifting equipment.'
   )}`;
 
   // Dash calculations for 44px circle (radius = 18, circumference = 2 * PI * 18 = 113.1)

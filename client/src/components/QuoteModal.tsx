@@ -45,7 +45,7 @@ export const QuoteModal: React.FC = () => {
         setFormData((prev) => ({
           ...prev,
           subject: 'Custom Material Handling Equipment Quote',
-          message: 'Hello Lift and Reach team,\n\nI would like to enquire about your hydraulic lifting solutions.'
+          message: 'Hello Hydrelex team,\n\nI would like to enquire about your hydraulic lifting solutions.'
         }));
       }
     }
@@ -110,7 +110,7 @@ export const QuoteModal: React.FC = () => {
                 Thank You For Your Enquiry!
               </h4>
               <p className="text-sm text-slate-600 max-w-md mx-auto">
-                Your request has been received by Lift and Reach Equipments sales & engineering team. We will review your application specifications and contact you shortly.
+                Your request has been received by Hydrelex Lift Systems sales & engineering team. We will review your application specifications and contact you shortly.
               </p>
               <button
                 onClick={closeQuoteModal}

@@ -9,10 +9,10 @@ export const AboutPageV4: React.FC = () => {
   const { openQuoteModal } = useApp();
 
   const paragraphs = [
-    'Lift and Reach Equipments is Hydraulic equipment Manufacturing Company, located in Sriperumpudur, Chennai, in the state of Tamil Nadu registered under the laws of "The Republic of India".',
-    'Lift and Reach Equipments has wide product expertise in design, development and manufacturing with more than 25 years of broad industrial experience in the field of manufacturing Hydraulics material handling equipments and Aerial access platforms.',
-    'Lift and Reach Equipments takes a product from the concept stage, all the way to the final product with superior quality. We understand various product development challenges that are typical to an industry. This helps us to address the entire product lifecycle, starting from feasibility study, through conceptual design, detailed design, analysis & simulation, manufacturing and testing.',
-    'By extensive industrial best engineering practices, Lift and Reach Equipments supports customers by analyzing their actual requirement to improve their productivity with our specially designed material handling hydraulic equipments.',
+    'Hydrelex Lift Systems is Hydraulic equipment Manufacturing Company, located in Sriperumbudur, Chennai, in the state of Tamil Nadu registered under the laws of "The Republic of India".',
+    'Hydrelex Lift Systems has wide product expertise in design, development and manufacturing with more than 25 years of broad industrial experience in the field of manufacturing Hydraulics material handling equipments and Aerial access platforms.',
+    'Hydrelex Lift Systems takes a product from the concept stage, all the way to the final product with superior quality. We understand various product development challenges that are typical to an industry. This helps us to address the entire product lifecycle, starting from feasibility study, through conceptual design, detailed design, analysis & simulation, manufacturing and testing.',
+    'By extensive industrial best engineering practices, Hydrelex Lift Systems supports customers by analyzing their actual requirement to improve their productivity with our specially designed material handling hydraulic equipments.',
     'Custom built Truck mounted/Towable Aerial access platforms up to 25 Meters height, Hydraulic Scissor lifting tables with different height and capacity (Height up to 12 Meters capacity up to 25 Tons), aircraft jacks, special purpose machines are our special products among our variety of products.',
     'Standard products in the array are Pallet truck, Stacker, Dock Leveler, Floor cranes, Drum lifter cum tilter and so on.'
   ];
@@ -32,10 +32,10 @@ export const AboutPageV4: React.FC = () => {
   return (
     <div className="w-full bg-[#F3F5F8] min-h-screen text-[#0B1220] selection:bg-[#2A62C9]/20 selection:text-[#0B1220]">
       <Helmet>
-        <title>About Us | Lift and Reach Equipments Chennai</title>
+        <title>About Us | Hydrelex Lift Systems Chennai</title>
         <meta
           name="description"
-          content="Learn about Lift and Reach Equipments, custom hydraulic lift and material handling machinery manufacturer in Chennai with over 25 years of experience."
+          content="Learn about Hydrelex Lift Systems, custom hydraulic lift and material handling machinery manufacturer in Chennai with over 25 years of experience."
         />
       </Helmet>
 

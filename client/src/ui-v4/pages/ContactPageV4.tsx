@@ -23,9 +23,11 @@ export const ContactPageV4: React.FC = () => {
   const phone1Tel = phone1.replace(/[^0-9+]/g, '');
   const phone2Tel = phone2.replace(/[^0-9+]/g, '');
   const email = settings.email || 'liftnreach@gmail.com';
-  const address = settings.address || 'No.419/9-1, Pillaiyar Koil Street, Kuthambakkam, Chennai - 600124, Tamil Nadu';
+  const address = settings.address || 'No B3-G4, Arakonam Road, Mevallurkuppam village, Sriperumbudur Taluk 602015.';
   const whatsappNum = (settings.whatsapp || '918939359592').replace(/[^0-9]/g, '');
   const googleMapEmbed = settings.google_map_embed || 'https://www.google.com/maps?q=Kuthambakkam,+Chennai';
+  const udyamNo = settings.udyam_no || 'UDYAM-TN-08-0090275';
+  const gstNo = settings.gst_no || '33BNOPK2159N1ZJ';
 
   const [formData, setFormData] = useState({
     name: '',
@@ -93,10 +95,10 @@ export const ContactPageV4: React.FC = () => {
   return (
     <div className="w-full bg-[#F3F5F8] text-[#0B1220] min-h-[calc(100vh-80px)] pb-24">
       <Helmet>
-        <title>Contact Us | Lift and Reach Equipments Chennai</title>
+        <title>Contact Us | Hydrelex Lift Systems Chennai</title>
         <meta
           name="description"
-          content="Get in touch with Lift and Reach Equipments for industrial hydraulic lifting inquiries, quotes, and facility location."
+          content="Get in touch with Hydrelex Lift Systems for industrial hydraulic lifting inquiries, quotes, and facility location."
         />
       </Helmet>
 
@@ -260,6 +262,10 @@ export const ContactPageV4: React.FC = () => {
               <p className="text-[14px] text-[#0B1220] leading-relaxed">
                 {address}
               </p>
+              <div className="pt-2 border-t border-[#E3E8F0] text-[11px] font-mono text-[#6B7280] flex flex-wrap gap-x-4 gap-y-1">
+                <span>GST: <strong className="text-[#0B1220]">{gstNo}</strong></span>
+                <span>UDYAM: <strong className="text-[#0B1220]">{udyamNo}</strong></span>
+              </div>
             </div>
 
             {/* Card 2: Our contact number */}

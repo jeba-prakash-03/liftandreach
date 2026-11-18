@@ -115,11 +115,11 @@ export const HeaderV4: React.FC<HeaderV4Props> = ({ onOpenCommandPalette, onOpen
         {/* Main Navbar */}
         <nav className="flex items-center justify-between w-full h-[52px] sm:h-[58px] md:h-[64px]">
           {/* Brand Logo */}
-          <Link to="/" className="flex items-center gap-2 group focus:outline-none shrink min-w-0 header__logo" aria-label="Lift and Reach Equipments Home">
+          <Link to="/" className="flex items-center gap-2 group focus:outline-none shrink min-w-0 header__logo" aria-label="Hydrelex Lift Systems Home">
             <div className="flex items-center gap-2.5">
               <img
                 src={isDarkOverBand ? '/images/logo-white-footer.png' : '/images/logo-wide.png'}
-                alt="Lift and Reach"
+                alt="Hydrelex Lift Systems"
                 className="h-6 sm:h-8 md:h-9 max-w-[170px] sm:max-w-none w-auto object-contain transition-transform duration-200 group-hover:scale-105"
               />
             </div>

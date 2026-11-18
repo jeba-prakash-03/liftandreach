@@ -79,7 +79,7 @@ export const EnquiryBasketDrawer: React.FC = () => {
     }
   };
 
-  const whatsappMessage = `Hello Lift and Reach Equipments, I would like to request a quote for the following equipment:\n${basket
+  const whatsappMessage = `Hello Hydrelex Lift Systems, I would like to request a quote for the following equipment:\n${basket
     .map((b, i) => `${i + 1}. ${b.name} (Code: ${b.code || 'N/A'})`)
     .join('\n')}`;
 
@@ -116,7 +116,7 @@ export const EnquiryBasketDrawer: React.FC = () => {
                 Enquiry Dispatched!
               </h4>
               <p className="text-xs text-slate-600 leading-relaxed px-4">
-                Your multi-product enquiry has been forwarded directly to Lift and Reach sales engineers. We will prepare your comprehensive quote and respond promptly.
+                Your multi-product enquiry has been forwarded directly to Hydrelex sales engineers. We will prepare your comprehensive quote and respond promptly.
               </p>
               <button
                 onClick={() => setIsBasketOpen(false)}

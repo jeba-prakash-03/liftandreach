@@ -224,7 +224,7 @@ export const HomeV4: React.FC<HomeV4Props> = ({ onOpenWizard }) => {
   return (
     <div className="w-full bg-[#F3F5F8] text-[#0B1220] selection:bg-[#2A62C9]/20 selection:text-[#0B1220]">
       <Helmet>
-        <title>Lift and Reach Equipments | Hydraulic Lifting Solutions Chennai</title>
+        <title>Hydrelex Lift Systems | Hydraulic Lifting Solutions Chennai</title>
         <meta
           name="description"
           content="Manufacturers of custom and standard hydraulic lifting tables, scissor lifts, aerial access platforms, goods lifts, and material handling systems in Chennai."

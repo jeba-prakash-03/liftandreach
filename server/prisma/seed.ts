@@ -12,24 +12,26 @@ async function main() {
   // 1. Settings (Not hardcoded - editable by admin)
   console.log('Seeding settings...');
   const settingsData = [
-    { key: 'company_name', value: 'Lift and Reach Equipments', description: 'Company Name' },
-    { key: 'tagline', value: 'A Way To Reach The Goal', description: 'Company Tagline' },
-    { key: 'meta_title', value: 'Lift and Reach Equipments | Hydraulic equipment Manufacturing Company in Chennai', description: 'Default Meta Title' },
-    { key: 'meta_description', value: 'Lift and Reach Equipments | Hydraulic equipment Manufacturing Company in Chennai. Manufacturer of Pallet truck, Stacker, Dock Leveler, Floor cranes, Drum lifter cum tilter, Scissor lifts and Aerial access platforms.', description: 'Default Meta Description' },
-    { key: 'meta_keywords', value: 'Pallet truck, Stacker, Dock Leveler, Floor cranes, Drum lifter cum tilter, Scissor lift, Goods lift, Aerial access platform, Aircraft jacks, Chennai, Tamil Nadu', description: 'Default Meta Keywords' },
+    { key: 'company_name', value: 'Hydrelex Lift Systems', description: 'Company Name' },
+    { key: 'tagline', value: 'A Way To Reach A Goal', description: 'Company Tagline' },
+    { key: 'meta_title', value: 'Hydrelex Lift Systems | Hydraulic Equipment Manufacturing Company in Chennai', description: 'Default Meta Title' },
+    { key: 'meta_description', value: 'Hydrelex Lift Systems | Hydraulic Equipment Manufacturing Company in Sriperumbudur, Chennai. Manufacturer of Pallet truck, Stacker, Dock Leveler, Floor cranes, Drum lifter cum tilter, Scissor lifts and Aerial access platforms.', description: 'Default Meta Description' },
+    { key: 'meta_keywords', value: 'Hydrelex Lift Systems, Pallet truck, Stacker, Dock Leveler, Floor cranes, Drum lifter cum tilter, Scissor lift, Goods lift, Aerial access platform, Aircraft jacks, Sriperumbudur, Chennai, Tamil Nadu', description: 'Default Meta Keywords' },
     { key: 'email', value: 'liftnreach@gmail.com', description: 'Primary Contact Email' },
     { key: 'phone_1', value: '(+91) 89393 59592', description: 'Primary Contact Phone 1' },
     { key: 'phone_2', value: '(+91) 97893 97504', description: 'Contact Phone 2' },
-    { key: 'phone_contact_page_alt', value: '(+91) 80729 30749', description: 'Alternative phone shown on original contact page (TODO: confirm with client)' },
+    { key: 'phone_contact_page_alt', value: '(+91) 80729 30749', description: 'Alternative phone shown on original contact page' },
     { key: 'whatsapp', value: '918939359592', description: 'WhatsApp number for click-to-chat' },
-    { key: 'address', value: 'No.419/9-1, Pillaiyar Koil Street, Kuthambakkam, Chennai - 600124, Tamil Nadu', description: 'Registered Factory & Office Address' },
-    { key: 'website', value: 'https://liftandreach.in', description: 'Official Website Domain (Original footer had www.liftandreach.com; TODO: verify domain ownership)' },
+    { key: 'address', value: 'No B3-G4, Arakonam Road, Mevallurkuppam village, Sriperumbudur Taluk 602015.', description: 'Registered Factory & Office Address' },
+    { key: 'udyam_no', value: 'UDYAM-TN-08-0090275', description: 'UDYAM Registration Number' },
+    { key: 'gst_no', value: '33BNOPK2159N1ZJ', description: 'GST Registration Number' },
+    { key: 'website', value: 'https://liftandreach.in', description: 'Official Website Domain' },
     { key: 'google_map_embed', value: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.671372579121!2d80.0215!3d13.0565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528a470126ff55%3A0xc39115bbf088eb8!2sKuthambakkam%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin', description: 'Google Map Embed URL' },
     { key: 'quality_policy', value: 'Our quality policy is to supply Superior Quality products to the entire satisfaction of our customers and it is our first and foremost task to assure our customers a feel of confidence in the quality and performance of our products.', description: 'Company Quality Policy statement' },
-    { key: 'opening_hours_mon_tue', value: '6.00 am - 10.00 pm', description: 'Mon - Tues Operating Hours from old site' },
-    { key: 'opening_hours_wed_thu', value: '8.00 am - 6.00 pm', description: 'Wed - Thurs Operating Hours from old site' },
-    { key: 'opening_hours_fri', value: '3.00 pm - 8.00 pm', description: 'Fri Operating Hours from old site' },
-    { key: 'opening_hours_sun', value: 'Closed', description: 'Sunday Operating Hours (Colosed on old site)' }
+    { key: 'opening_hours_mon_tue', value: '6.00 am - 10.00 pm', description: 'Mon - Tues Operating Hours' },
+    { key: 'opening_hours_wed_thu', value: '8.00 am - 6.00 pm', description: 'Wed - Thurs Operating Hours' },
+    { key: 'opening_hours_fri', value: '3.00 pm - 8.00 pm', description: 'Fri Operating Hours' },
+    { key: 'opening_hours_sun', value: 'Closed', description: 'Sunday Operating Hours' }
   ];
 
   for (const s of settingsData) {
@@ -59,8 +61,8 @@ async function main() {
   console.log('Seeding hero slides...');
   const heroSlidesData = [
     {
-      title: 'Lift and Reach Equipments',
-      subtitle: 'A Way To Reach The Goal',
+      title: 'Hydrelex Lift Systems',
+      subtitle: 'A Way To Reach A Goal',
       badge: '25+ Years Industrial Excellence',
       image: '/images/product/bannerhome.png',
       ctaText: 'View Products',
@@ -105,13 +107,13 @@ async function main() {
   console.log('Seeding about page...');
   const aboutBlocks = {
     title: 'About Us',
-    heading: 'Welcome To LIFT AND REACH EQUIPMENTS',
-    tagline: 'A Way To Reach The Goal',
+    heading: 'Welcome To HYDRELEX LIFT SYSTEMS',
+    tagline: 'A Way To Reach A Goal',
     paragraphs: [
-      'Lift and Reach Equipments is Hydraulic equipment Manufacturing Company, located in Sriperumpudur, Chennai, in the state of Tamil Nadu registered under the laws of "The Republic of India".',
-      'Lift and Reach Equipments has wide product expertise in design, development and manufacturing with more than 25 years of broad industrial experience in the field of manufacturing Hydraulics material handling equipments and Aerial access platforms.',
-      'Lift and Reach Equipments takes a product from the concept stage, all the way to the final product with superior quality. We understand various product development challenges that are typical to an industry. This helps us to address the entire product lifecycle, starting from feasibility study, through conceptual design, detailed design, analysis & simulation, manufacturing and testing.',
-      'By extensive industrial best engineering practices, Lift and Reach Equipments supports customers by analyzing their actual requirement to improve their productivity with our specially designed material handling hydraulic equipments.',
+      'Hydrelex Lift Systems is Hydraulic equipment Manufacturing Company, located in Sriperumbudur, Chennai, in the state of Tamil Nadu registered under the laws of "The Republic of India".',
+      'Hydrelex Lift Systems has wide product expertise in design, development and manufacturing with more than 25 years of broad industrial experience in the field of manufacturing Hydraulics material handling equipments and Aerial access platforms.',
+      'Hydrelex Lift Systems takes a product from the concept stage, all the way to the final product with superior quality. We understand various product development challenges that are typical to an industry. This helps us to address the entire product lifecycle, starting from feasibility study, through conceptual design, detailed design, analysis & simulation, manufacturing and testing.',
+      'By extensive industrial best engineering practices, Hydrelex Lift Systems supports customers by analyzing their actual requirement to improve their productivity with our specially designed material handling hydraulic equipments.',
       'Custom built Truck mounted/Towable Aerial access platforms up to 25 Meters height, Hydraulic Scissor lifting tables with different height and capacity (Height up to 12 Meters capacity up to 25 Tons), aircraft jacks, special purpose machines are our special products among our variety of products.',
       'Standard products in the array are Pallet truck, Stacker, Dock Leveler, Floor cranes, Drum lifter cum tilter and so on.'
     ],

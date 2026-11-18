@@ -11,8 +11,10 @@ export const FooterV4: React.FC = () => {
   const phone1Tel = phone1.replace(/[^0-9+]/g, '');
   const phone2Tel = phone2.replace(/[^0-9+]/g, '');
   const email = settings.email || 'liftnreach@gmail.com';
-  const address = settings.address || 'No.419/9-1, Pillaiyar Koil Street, Kuthambakkam, Chennai - 600124, Tamil Nadu';
+  const address = settings.address || 'No B3-G4, Arakonam Road, Mevallurkuppam village, Sriperumbudur Taluk 602015.';
   const whatsappNum = (settings.whatsapp || '918939359592').replace(/[^0-9]/g, '');
+  const udyamNo = settings.udyam_no || 'UDYAM-TN-08-0090275';
+  const gstNo = settings.gst_no || '33BNOPK2159N1ZJ';
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -32,15 +34,15 @@ export const FooterV4: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-14 border-b border-white/10">
           {/* Col 1 & 2: Brand, identity & contact */}
           <div className="lg:col-span-2 space-y-5">
-            <Link to="/" className="inline-block" aria-label="Lift and Reach Equipments Home">
+            <Link to="/" className="inline-block" aria-label="Hydrelex Lift Systems Home">
               <img
                 src="/images/logo-white-footer.png"
-                alt="Lift and Reach Equipments"
+                alt="Hydrelex Lift Systems"
                 className="h-[46px] w-auto object-contain"
               />
             </Link>
             <p className="text-[14px] text-white/70 max-w-sm leading-relaxed">
-              Lift and Reach Equipments is Hydraulic equipment Manufacturing Company, located in Sriperumpudur, Chennai, in the state of Tamil Nadu registered under the laws of 'The Republic of India'.
+              Hydrelex Lift Systems is a premier hydraulic equipment manufacturing company, located in Sriperumbudur Taluk, Chennai, in the state of Tamil Nadu registered under the laws of 'The Republic of India'.
             </p>
 
             <div className="space-y-3 pt-2 text-[13px] text-white/80">
@@ -65,6 +67,10 @@ export const FooterV4: React.FC = () => {
                 <a href={`mailto:${email}`} className="hover:text-white transition-colors">
                   {email}
                 </a>
+              </div>
+              <div className="pt-2 text-[11px] font-mono text-white/60 space-y-1">
+                <div>GST NO: <span className="text-white/80 font-semibold">{gstNo}</span></div>
+                <div>UDYAM: <span className="text-white/80 font-semibold">{udyamNo}</span></div>
               </div>
             </div>
           </div>
@@ -133,7 +139,7 @@ export const FooterV4: React.FC = () => {
               Direct Contact
             </h4>
             <div className="text-[13px] text-white/75 space-y-2">
-              <p className="font-semibold text-white/90">Lift and Reach Equipments</p>
+              <p className="font-semibold text-white/90">Hydrelex Lift Systems</p>
               <p className="text-white/60 text-[12px] leading-relaxed">{address}</p>
               <div className="pt-4">
                 <a
@@ -153,7 +159,7 @@ export const FooterV4: React.FC = () => {
         {/* Bottom Bar: Copyright & Back-to-Top */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[12px] text-white/50">
           <div>
-            &copy; {new Date().getFullYear()} Lift and Reach Equipments. All rights reserved.
+            &copy; {new Date().getFullYear()} Hydrelex Lift Systems. All rights reserved.
           </div>
           <div className="flex items-center gap-6">
             <span>Chennai, Tamil Nadu, India</span>

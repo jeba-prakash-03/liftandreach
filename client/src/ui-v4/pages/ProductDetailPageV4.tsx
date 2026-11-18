@@ -101,7 +101,7 @@ export const ProductDetailPageV4: React.FC = () => {
   return (
     <div className="w-full bg-[#F3F5F8] min-h-screen text-[#0B1220] selection:bg-[#2A62C9]/20 selection:text-[#0B1220] pb-24 md:pb-12">
       <Helmet>
-        <title>{product.name} | Lift and Reach Equipments Chennai</title>
+        <title>{product.name} | Hydrelex Lift Systems Chennai</title>
         <meta
           name="description"
           content={`${product.name} - ${product.shortDesc || product.description || 'Hydraulic material handling lifting solution'}`}

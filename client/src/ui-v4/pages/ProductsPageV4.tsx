@@ -181,7 +181,7 @@ export const ProductsPageV4: React.FC = () => {
   return (
     <div className="w-full min-h-screen bg-[#F3F5F8] text-[#0B1220]">
       <Helmet>
-        <title>Industrial Lifting & Material Handling Equipment Catalog | Lift and Reach</title>
+        <title>Industrial Lifting & Material Handling Equipment Catalog | Hydrelex Lift Systems</title>
         <meta
           name="description"
           content="Explore Chennai's complete range of hydraulic scissor lifts, aerial access platforms, goods lifts, dock levelers, pallet trucks, and custom lifting systems."
