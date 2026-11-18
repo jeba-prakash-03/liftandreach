@@ -14,7 +14,7 @@ export const CutoutImage: React.FC<CutoutImageProps> = ({
 }) => {
   const [errorStage, setErrorStage] = useState<number>(0);
 
-  // Normalize stem
+  // Normalize stems: support both raw double-hyphen and single-hyphen variants
   const rawStem = rawImage
     ? rawImage
         .replace(/^.*[\\/]/, '')
@@ -22,15 +22,10 @@ export const CutoutImage: React.FC<CutoutImageProps> = ({
         .toLowerCase()
         .replace(/\s+/g, '-')
     : '';
-  const baseStem = rawStem.replace(/-+/g, '-');
+  const singleHyphenStem = rawStem.replace(/-+/g, '-');
+  const baseStem = rawStem;
 
-  // Fallbacks:
-  // 0: High-res WebP cutout (/images/cutout/${baseStem}-800.webp with srcset 800/480)
-  // 1: PNG cutout (/images/cutout/${baseStem}.png)
-  // 2: Original image in rounded frame (/images/product/...)
-  // 3: Neutral fallback (/images/cutout/scissor-lift.webp)
-
-  if (!baseStem) {
+  if (!rawStem && !rawImage) {
     return (
       <div className={`flex items-center justify-center bg-[#F1F5F9] text-gray-400 text-xs ${className}`}>
         No image
@@ -38,18 +33,19 @@ export const CutoutImage: React.FC<CutoutImageProps> = ({
     );
   }
 
+  // Stage 0: WebP cutout with exact stem (e.g. scissor-lift--pit-mounted-800.webp)
   if (errorStage === 0) {
     return (
       <picture>
         <source
-          srcSet={`/images/cutout/${baseStem}-800.webp 800w, /images/cutout/${baseStem}-480.webp 480w`}
+          srcSet={`/images/cutout/${baseStem}-800.webp 800w, /images/cutout/${baseStem}-480.webp 480w, /images/cutout/${baseStem}.webp 800w`}
           sizes="(max-width: 640px) 90vw, 400px"
           type="image/webp"
         />
         <img
           src={`/images/cutout/${baseStem}-800.webp`}
           alt={alt}
-          className={className}
+          className={`w-full h-full object-contain ${className}`}
           loading="lazy"
           onError={() => setErrorStage(1)}
           {...props}
@@ -58,42 +54,47 @@ export const CutoutImage: React.FC<CutoutImageProps> = ({
     );
   }
 
+  // Stage 1: Try single-hyphen stem
   if (errorStage === 1) {
     return (
+      <picture>
+        <source
+          srcSet={`/images/cutout/${singleHyphenStem}-800.webp 800w, /images/cutout/${singleHyphenStem}-480.webp 480w, /images/cutout/${singleHyphenStem}.webp 800w`}
+          sizes="(max-width: 640px) 90vw, 400px"
+          type="image/webp"
+        />
+        <img
+          src={`/images/cutout/${singleHyphenStem}-800.webp`}
+          alt={alt}
+          className={`w-full h-full object-contain ${className}`}
+          loading="lazy"
+          onError={() => setErrorStage(2)}
+          {...props}
+        />
+      </picture>
+    );
+  }
+
+  // Stage 2: Direct raw product image (clean, unboxed, seamless)
+  if (errorStage === 2) {
+    return (
       <img
-        src={`/images/cutout/${baseStem}.png`}
+        src={rawImage || `/images/cutout/${baseStem}.png`}
         alt={alt}
-        className={className}
+        className={`w-full h-full object-contain ${className}`}
         loading="lazy"
-        onError={() => setErrorStage(2)}
+        onError={() => setErrorStage(3)}
         {...props}
       />
     );
   }
 
-  if (errorStage === 2) {
-    return (
-      <div className="w-full h-full p-2 flex items-center justify-center rounded-[24px] bg-white border border-[#E2E8F0]">
-        <img
-          src={rawImage || '/images/cutout/scissor-lift.webp'}
-          alt={alt}
-          className={`object-contain max-h-full ${className}`}
-          loading="lazy"
-          onError={() => {
-            console.warn(`[ImageFallback] Failed to load original for ${baseStem}: ${rawImage}`);
-            setErrorStage(3);
-          }}
-          {...props}
-        />
-      </div>
-    );
-  }
-
+  // Stage 3: Neutral fallback
   return (
     <img
       src="/images/cutout/scissor-lift.webp"
       alt={alt}
-      className={`object-contain opacity-60 ${className}`}
+      className={`w-full h-full object-contain opacity-75 ${className}`}
       {...props}
     />
   );
